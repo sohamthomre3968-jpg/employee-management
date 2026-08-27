@@ -16,40 +16,40 @@ def get_db_connection():
     port=int(os.getenv("MYSQLPORT", 3306)),
     user=os.getenv("MYSQLUSER"),
     password=os.getenv("MYSQLPASSWORD"),
-    database=os.getenv("MYSQL_DATABASE")
+    database=os.getenv("MYSQLDATABASE")
 )
 #     app.run(debug=True)
 @app.route("/")
 def home():
-    db = get_db_connection()
-    cursor = db.cursor()
+    # db = get_db_connection()
+    # cursor = db.cursor()
 
     # Total employees
-    cursor.execute("SELECT COUNT(*) FROM EMP")
-    total_employees = cursor.fetchone()[0]
+    # cursor.execute("SELECT COUNT(*) FROM EMP")
+    # total_employees = cursor.fetchone()[0]
 
-    # Total departments
-    cursor.execute("SELECT COUNT(DISTINCT Department) FROM EMP")
-    total_departments = cursor.fetchone()[0]
+    # # Total departments
+    # cursor.execute("SELECT COUNT(DISTINCT Department) FROM EMP")
+    # total_departments = cursor.fetchone()[0]
 
-    # Recent employees
-    cursor.execute("""
-        SELECT id, emp_name, Department
-        FROM EMP
-        ORDER BY id DESC
-        LIMIT 5
-    """)
+    # # Recent employees
+    # cursor.execute("""
+    #     SELECT id, emp_name, Department
+    #     FROM EMP
+    #     ORDER BY id DESC
+    #     LIMIT 5
+    # """)
 
-    recent_employees = cursor.fetchall()
+    # recent_employees = cursor.fetchall()
 
-    cursor.close()
-
-    return render_template(
-        "home.html",
-        total_employees=total_employees,
-        total_departments=total_departments,
-        recent_employees=recent_employees
-    )
+    # cursor.close()
+    return "Flask is running"
+    # return render_template(
+    #     "home.html",
+        # total_employees=total_employees,
+        # total_departments=total_departments,
+        # recent_employees=recent_employees
+    # )
     # if request.method == "GET":
         # return render_template("home.html")
 
