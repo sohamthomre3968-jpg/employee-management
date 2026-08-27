@@ -711,4 +711,33 @@ h1{
 
 .dashboard-table tr:hover {
     background: #f3f8f6;
+}/* Mobile Responsive */
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .employee-table {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 600px;
+    }
+
+    .sidebar a {
+        width: 90%;
+        margin: 10px auto;
+    }
+
 }
