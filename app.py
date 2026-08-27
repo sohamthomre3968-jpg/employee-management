@@ -21,6 +21,7 @@ def get_db_connection():
 #     app.run(debug=True)
 @app.route("/")
 def home():
+    return "Flask is running"
     # db = get_db_connection()
     # cursor = db.cursor()
 
@@ -43,7 +44,6 @@ def home():
     # recent_employees = cursor.fetchall()
 
     # cursor.close()
-    return "Flask is running"
     # return render_template(
     #     "home.html",
         # total_employees=total_employees,
