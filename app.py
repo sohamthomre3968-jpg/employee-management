@@ -7,7 +7,7 @@ app = Flask(__name__)
 # db = mysql.connector.connect(
 #     host="localhost",
 #     user="root",
-#     password="3968",
+#     password=,
 #     database="Employee"
 
 def get_db_connection(): 
@@ -16,15 +16,15 @@ def get_db_connection():
     port=int(os.getenv("MYSQLPORT", 3306)),
     user=os.getenv("MYSQLUSER"),
     password=os.getenv("MYSQLPASSWORD"),
-    database=os.getenv("MYSQLDATABASE")
+    database=os.getenv("MYSQL_DATABASE")
 )
-db = mysql.connector.connect(
-    host=os.getenv("MYSQLHOST"),
-        port=int(os.getenv("MYSQLPORT", 3306)),
-        user=os.getenv("MYSQLUSER"),
-        password=os.getenv("MYSQLPASSWORD"),
-        database=os.getenv("MYSQLDATABASE")
-      )
+# db = mysql.connector.connect(
+#     host=os.getenv("MYSQLHOST"),
+#         port=int(os.getenv("MYSQLPORT", 3306)),
+#         user=os.getenv("MYSQLUSER"),
+#         password=os.getenv("MYSQLPASSWORD"),
+#         database=os.getenv("MYSQLDATABASE")
+#       )
 
 # if db.is_connected():
 #     print("Database is connected successfully!! ")
