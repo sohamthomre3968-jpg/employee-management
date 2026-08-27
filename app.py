@@ -18,18 +18,6 @@ def get_db_connection():
     password=os.getenv("MYSQLPASSWORD"),
     database=os.getenv("MYSQL_DATABASE")
 )
-# db = mysql.connector.connect(
-#     host=os.getenv("MYSQLHOST"),
-#         port=int(os.getenv("MYSQLPORT", 3306)),
-#         user=os.getenv("MYSQLUSER"),
-#         password=os.getenv("MYSQLPASSWORD"),
-#         database=os.getenv("MYSQLDATABASE")
-#       )
-
-# if db.is_connected():
-#     print("Database is connected successfully!! ")
-
-# if __name__ == "__main__":
 #     app.run(debug=True)
 @app.route("/")
 def home():
