@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="sidebar">
+         <span id="emp">Employees</span><br><br>
+        <a href="{{url_for('home')}}">
+            <!-- <img src="—Pngtree—home icon simple  symbol_3566362.png" alt="Home"> -->
+            <span>Home</span>
+        </a><br><br>
+        <a href="{{url_for('register')}}">
+            <!-- <img src="f8f58a9e-37b9-444e-9aea-22f72967e96b.jpg" alt="Registeration"> -->
+            <span>Registration</span>
+        </a> <br><br>
+        <a href="{{url_for('employee')}}">
+
+            <span>Employees</span>
+        </a><br><br>
+        <a href="{{ url_for('training')}}">
+
+            <span>Training & Courses</span>
+        </a>
+ </div>
+    <div class="main-content">
+        <h1>Employee List</h1>
+        <div class="employee-action">
+            <a href="{{ url_for('register')}}"class="add-btn">+Add Employee</a>
+        <input 
+        type="text" placeholder="Search Employee...."
+        onkeyup="searchEmployee()">
+        </div>
+
+        <table class="employee-table">
+            <thead>
+                <tr>
+                    <th>Employee Id</th>
+                    <th>Employee Name</th>
+                    <th>Deparment</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for emp in employees %}
+                <tr>
+                    <td>{{ emp[0] }}</td>
+                    <td>{{emp[1]}}</td>
+                    <td>{{emp[2]}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+<script>
+function searchEmployee() {
+
+    let input = document.getElementById("searchEmployee");
+    let filter = input.value.toLowerCase();
+
+    let rows = document
+        .getElementById("employeeTable")
+        .getElementsByTagName("tr");
+
+    for (let i = 0; i < rows.length; i++) {
+
+        let text = rows[i].textContent.toLowerCase();
+
+        if (text.includes(filter)) {
+            rows[i].style.display = "";
+        } else {
+            rows[i].style.display = "none";
+        }
+    }
+}
+</script>
+</html>

@@ -1,0 +1,714 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #f1f5f3;
+    margin-left: 180px;
+    /* margin-top: 10px; */
+    margin-bottom: 20px;
+
+}
+h2{
+    text-align: center;
+    padding-top: 30px ;
+    text-decoration: solid;
+    font-display: block;
+    font-family:'inter',sans-serif;
+    font-size: 20px;
+    color:darkolivegreen;
+    padding-bottom: 30px;;
+    font-weight: 600;
+}
+.insert{
+    margin-left: 270px;
+    font: bold;
+    margin-bottom: 15px;
+    text-size-adjust: inherit;
+    scroll-padding: inherit;
+}
+ .sidebar{
+    width: 170px;
+    height: 100vh;
+    background-color: #064b3b;
+    position: fixed;
+    left:0;
+    top:0;
+    z-index: 1000;
+    padding: 10px;
+    margin-right: 200px;
+    box-shadow: 3px 0 12px rgba(0, 0, 0, 0.12);
+}
+.sidebar a{
+    display:flex;
+    /* background-color: #f8f8f9; */
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    border-radius: 10px;
+    padding-top: 10px;
+    text-decoration: none;
+    margin-left: 8px;
+    font-family: sans-serif;
+    align-items: center;
+    padding:14px 18px;
+    margin-bottom: 15px;
+    background: #ffffff;
+    font-weight: 600;
+    transition: 0.3s;
+    justify-content: center;
+   
+
+}
+.sidebar a:hover{
+    background-color: cornsilk;
+    color: black;
+    transform: translateX(10px);
+}
+.sidebar a:active{
+    transform:translateX(10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: white;
+    color:#064b3b
+}
+span{
+    color: rgb(157, 157, 33);
+    font-size: larger;
+    /* color:#c9fdef */
+}
+#emp{
+    font-size: x-large;
+    text-align: right;
+}
+.sidebar a img{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+.form-row{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 18px;
+    margin-left: 180px;
+}
+.form-row label{
+    min-width: 130px;
+    font-weight: 600;
+}
+.form-row input,
+.form-row select{
+    height:38px;
+    /* padding: 0 10px; */
+    border:1px solid;
+    border-radius: 7px;
+    font-family: inherit;
+    box-sizing: border-box;
+    font-size: 14px;
+    width: 220px;
+    height: 38px;
+    /* outline: none; */
+    /* padding-right: 25px; */
+
+}
+.form-row input:focus,
+.form-row select:focus{
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px
+    rgba(37 ,99, 235,0.12);
+}
+button{
+    
+    /* border:none; */
+    border-radius: 18px;
+    /* display: block; */
+    width:80px;
+    height:20px;
+    size:25px;
+    cursor:pointer;
+    font-family: inherit;
+    font-size: medium;
+    font-weight: 600;
+    margin-left: 250px;
+    /* justify-content: center; */
+    gap: 80px;
+    margin-bottom:30px;
+    background-color: #1a3258;
+    color: rgb(250, 248, 248);
+}
+/* .submit{
+    background-color: #061d4286;
+    color: white;
+}
+.reset{
+    background-color: #e5e7eb;
+    color:#333; */
+
+h1{
+    text-align: center;
+}
+.form-container{
+    max-width: 1000px;
+    margin: 20px auto ;
+    padding: 35px 40px;
+    background: #f8f8f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px
+    rgba(0, 0, 0, 0.80);
+    margin-left: 100px;
+
+}
+.salary-box{
+    width: 80%;
+    border-collapse: collapse;
+    border:none;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:17px;
+    margin-left: 220px;
+
+}
+.salary-box h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 35px;
+    color: #222;
+}
+.salary-table{
+    width: 90%;
+    border-collapse: collapse;
+    border:none;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:17px;
+}
+.salary-table th{
+    text-align: center;
+    padding:15px 25px;
+    background:transparent;
+    color:#333;
+}
+.salary-table td{
+    padding:16px 25px;
+    border:none;
+    color:#444;
+}
+.salary-table th:nth-child(1),
+.salary-table td:nth-child(1){
+    width: 25%;
+}
+.salary-table th:nth-child(2),
+.salary-table td:nth-child(2){
+    width:35%;
+}
+.salary-table th:nth-child(3),
+.salary-table td:nth-child(3){
+    width:40%;
+}
+.salary-table tbody tr:hover{
+    /* transform: translateY(10px); */
+    background-color: #d6d9dec9;
+    animation-duration: 4ms;
+
+}
+.salary-table thead tr{
+    border-bottom: 2px solid #eee;
+}
+#addbtn{
+    width: 170px;
+    height: 50px;
+    background-color: darkgreen;
+}
+/* .dashboard{
+    margin-left: 20px;
+    padding: 30px 40px;
+    min-height:100vh;
+    background-color: #ffffff;
+}
+.dashboard{
+    text-decoration: center;
+    font-size:38px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:#222;
+    margin-bottom: 45px;
+}
+.cards{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+
+}
+.card{
+    width:280px;
+    height: 150px;
+    background-color: #ffffff;
+    border: 2px solid #777;
+    border-radius: 15px;
+    padding:25px;
+    display:flex;
+    align-items: center;
+    gap:20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12)
+}
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+.card-icon{
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background-color: #e8f0ed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+.card-content h3 {
+    margin: 0 0 8px 0;
+    font-size:18px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:#333; 
+}
+.card-content p{
+    margin:0;
+    font-size: 32px;
+    font-weight:bold;
+    color: #006b4f;
+
+}
+@media (max-width: 800px){
+    .dashboard{
+        margin-left: 220px;
+        padding: 25px;
+    }
+    .dashboard h1{
+        font-size: 30px;
+
+    }
+    .cards{
+        justify-content:center;
+
+    }
+    .cards{
+        width: 260px;
+    }
+} */
+ .dashboard {
+    margin-left: 20px;
+    padding: 30px 40px;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.dashboard h1 {
+    text-align: center;
+    font-size: 38px;
+    font-family: Georgia, serif;
+    color: #222;
+    margin: 0 0 40px 0;
+}
+
+
+/* CARDS CONTAINER */
+/* .cards {
+    display: flex;
+    gap: 25px;
+    margin-left: 20px;
+}
+
+.card {
+    width: 280px;
+    height: 150px;
+    padding: 25px;
+    box-sizing: border-box;
+
+    background: white;
+    border: 2px solid #999;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+/* CARD TITLE */
+.cards {
+    display: flex;
+    gap: 25px;
+    margin-left: 20px;
+}
+
+.card {
+    width: 280px;
+    height: 150px;
+    padding: 25px;
+    box-sizing: border-box;
+
+    background: white;
+    border: 2px solid #999;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+.card h3 {
+    margin: 0 0 12px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+
+/* CARD NUMBER */
+.card p {
+    margin: 0;
+    font-size: 32px;
+    font-weight: bold;
+    color: #006b4f;
+}
+.main-content{
+    margin-left: 20px;
+    min-height: 100vh;
+    padding: 40px 50px;
+    background: #f4f7f6;
+}
+.main-content h1{
+    text-align:center;
+    margin: 0 0 35px 0;
+    font-size: 36px;
+    color:#12352c;
+}
+.employee-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 30px;
+}
+
+.add-btn {
+    background: #168b3a;
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#searchEmployee {
+    width: 280px;
+    padding: 12px 15px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.employee-table th,
+.employee-table td {
+    padding: 15px;
+    text-align: left;
+}
+
+.employee-table th:nth-child(1),
+.employee-table td:nth-child(1) {
+    width: 20%;
+}
+
+.employee-table th:nth-child(2),
+.employee-table td:nth-child(2) {
+    width: 45%;
+}
+
+.employee-table th:nth-child(3),
+.employee-table td:nth-child(3) {
+    width: 35%;
+}
+.employee-table{
+    width: 90%;
+    border-collapse: collapse;
+    border:none;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:17px;
+}
+.employee-table th{
+    text-align: center;
+    padding:15px 25px;
+    background:transparent;
+    color:#333;
+}
+.employee-table td{
+    padding:16px 25px;
+    border:none;
+    color:#444;
+}
+.employee-table th:nth-child(1),
+.employee-table td:nth-child(1){
+    width: 25%;
+}
+.employee-table th:nth-child(2),
+.employee-table td:nth-child(2){
+    width:35%;
+}
+.employee-table th:nth-child(3),
+.employee-table td:nth-child(3){
+    width:40%;
+}
+.employee-table tbody tr:hover{
+    /* transform: translateY(10px); */
+    background-color: #d6d9dec9;
+    animation-duration: 4ms;
+
+}
+.employee-table thead tr{
+    border-bottom: 2px solid #eee;
+}
+/* ---------- BODY ---------- */
+
+/* body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Georgia, serif;
+
+    background-color: #f8f5ee;
+    color: #222;
+} */
+
+
+/* ---------- MAIN CONTENT ---------- */
+
+.main-b {
+    margin-left: 25px;
+    padding: 35px 45px;
+}
+
+
+/* ---------- HEADING ---------- */
+ .main-b h1 {
+    text-align: center;
+
+    font-size: 40px;
+
+    margin-bottom: 40px;
+
+    color: #111;
+}
+
+/* ---------- ASSIGN TRAINING BOX ---------- */
+.training-form {
+    width: 650px;
+    margin: 0 auto 45px auto;
+    padding: 25px 35px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.training-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
+}
+
+.training-form input,
+.training-form select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.training-form input:focus,
+.training-form select:focus {
+    outline: none;
+    border-color: #006b4f;
+}
+
+
+/* Assign Button */
+
+.training-form button {
+    display: block;
+     margin: 25px auto 5px auto; 
+    /* padding: 10px 30px; */
+    border: none;
+    /* border-radius: 20px; */
+    background: #006b4f;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 85px;
+    height:35px;
+    text-align: center;
+}
+
+.training-form button:hover {
+    background: #004f3a;
+}
+
+
+/* ===== Training Records ===== */
+
+.records {
+    width: 95%;
+    margin: auto;
+}
+
+.records h2 {
+    margin-bottom: 20px;
+}
+
+.records table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.records th {
+    background: #006b4f;
+    color: white;
+    padding: 12px 10px;
+    text-align: center;
+}
+
+.records td {
+    padding: 11px 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.records tr:hover {
+    background: #f2f8f5;
+}
+.main-d {
+    margin-left: 35px;
+    padding: 35px;
+}
+
+
+/* HEADING */
+
+.main-d h1 {
+    font-size: 34px;
+    margin-bottom: 30px;
+    color: #123c35;
+}
+
+
+/* CARDS */
+
+.dashboard-cards {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.dashboard-card {
+    width: 260px;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+.dashboard-card h3 {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.dashboard-card p {
+    font-size: 35px;
+    font-weight: bold;
+    color: #159447;
+}
+
+
+/* RECENT EMPLOYEE */
+
+.recent-section {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    color: #123c35;
+}
+
+
+/* VIEW ALL BUTTON */
+
+.view-btn {
+    text-decoration: none;
+
+    background: #159447;
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+
+/* TABLE */
+
+.dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.dashboard-table th {
+    background: #063f35;
+    color: white;
+
+    padding: 14px;
+
+    text-align: left;
+}
+
+.dashboard-table td {
+    padding: 14px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.dashboard-table tr:hover {
+    background: #f3f8f6;
+}

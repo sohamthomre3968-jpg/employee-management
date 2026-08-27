@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Training & Courses</title>
+
+    <!-- <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 30px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .salary-box {
+            background-color: white;
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #e8e8e8;
+        }
+
+        .total {
+            font-weight: bold;
+        }
+    </style> -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+  <div class="sidebar">
+         <span id="emp">Employees</span><br><br>
+        <a href="{{url_for('home')}}">
+            <!-- <img src="—Pngtree—home icon simple  symbol_3566362.png" alt="Home"> -->
+            <span>Home</span>
+        </a><br><br>
+        <a href="{{url_for('register')}}">
+            <!-- <img src="f8f58a9e-37b9-444e-9aea-22f72967e96b.jpg" alt="Registeration"> -->
+            <span>Registration</span>
+        </a> <br><br>
+        <a href="{{url_for('employee')}}">
+
+            <span>Employees</span>
+        </a><br><br>
+        <a href="{{ url_for('training')}}">
+
+            <span>Training & Courses</span>
+        </a>
+        </div>
+<div class="main-b">
+
+    <h1>Training & Courses</h1>
+
+    <div class="training-form">
+
+        <h2>Assign Training</h2>
+
+        <form action="/add-training" method="POST">
+
+            <label>Employee:</label>
+
+            <select name="employee_id" required>
+                <option value="">Select Employee</option>
+
+                {% for employee in employees %}
+                <option value="{{ employee.ID }}">
+                    {{ employee.emp_Name }} -
+                    {{ employee.Department }}
+                </option>
+                {% endfor %}
+
+            </select>
+
+
+            <label>Course Name:</label>
+            <input type="text"
+                   name="course_name"
+                   placeholder="Enter course name"
+                   required>
+
+
+            <label>Trainer:</label>
+            <input type="text"
+                   name="trainer"
+                   placeholder="Enter trainer name">
+
+
+            <label>Start Date:</label>
+            <input type="date"
+                   name="start_date">
+
+
+            <label>End Date:</label>
+            <input type="date"
+                   name="end_date">
+
+
+            <button type="submit">
+                Assign
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <div class="records">
+
+        <h2>Training Records</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Designation</th>
+                    <th>Course</th>
+                    <th>Trainer</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                {% for record in records %}
+
+                <tr>
+                    <td>{{ record.employee_id }}</td>
+                    <td>{{ record.employee_Name }}</td>
+                    <td>{{ record.department }}</td>
+                    <td>{{ record.designation }}</td>
+                    <td>{{ record.course_name }}</td>
+                    <td>{{ record.trainer }}</td>
+                    <td>{{ record.start_date }}</td>
+                    <td>{{ record.end_date }}</td>
+                    <td>{{ record.status }}</td>
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>

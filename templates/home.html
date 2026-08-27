@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body >
+   <div class="sidebar">
+         <span id="emp">Employees</span><br><br>
+        <a href="{{url_for('home')}}">
+            <!-- <img src="—Pngtree—home icon simple  symbol_3566362.png" alt="Home"> -->
+            <span>Home</span>
+        </a><br><br>
+        <a href="{{url_for('register')}}">
+            <!-- <img src="f8f58a9e-37b9-444e-9aea-22f72967e96b.jpg" alt="Registeration"> -->
+            <span>Registration</span>
+        </a> <br><br>
+        <a href="{{url_for('employee')}}">
+
+            <span>Employees</span>
+        </a><br><br>
+        <a href="{{ url_for('training')}}">
+
+            <span>Training & Courses</span>
+        </a>
+ </div>
+ <!-- <div class="dashboard">
+    <h1>Employee Dashboard</h1>
+    <!-- <div class="cards">
+        <div class="card">
+            <div class="card_icon">
+                <div class="card-content">
+                    <h3>Total Employees</h3>
+                    <p>{{ total_employees }}</p>
+                </div>
+            </div>
+            <div class="card">
+                    <div class="card-content">
+                        <h3>Total Department</h3>
+                        <p>{{ total_departments }}</p>
+                    </div>
+                 </div> <div class="cards"> -->
+
+    <!-- FIRST CARD -->
+    <!-- <div class="card">
+        <h3>Total Employees</h3>
+        <p>{{ total_employees }}</p>
+    </div>
+
+    SECOND CARD -->
+    <!-- <div class="card">
+        <h3>Total Department</h3>
+        <p>{{ total_departments }}</p>
+    </div>
+
+</div>
+    </div>
+    
+ </div>
+ </body>
+</html> -->
+    <!-- MAIN CONTENT -->
+    <div class="main-d">
+
+        <h1>Employee Dashboard</h1>
+
+        <!-- CARDS -->
+        <div class="dashboard-cards">
+
+            <div class="dashboard-card">
+                <h3>Total Employees</h3>
+                <p>{{ total_employees }}</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Total Departments</h3>
+                <p>{{ total_departments }}</p>
+            </div>
+
+        </div>
+
+
+        <!-- RECENT EMPLOYEES -->
+        <div class="recent-section">
+
+            <div class="section-header">
+                <h2>Recent Employees</h2>
+
+                <a href="{{ url_for('employee') }}" class="view-btn">
+                    View All
+                </a>
+            </div>
+
+            <table class="dashboard-table">
+
+                <thead>
+                    <tr>
+                        <th>Employee ID</th>
+                        <th>Employee Name</th>
+                        <th>Department</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {% for emp in recent_employees %}
+
+                    <tr>
+                        <td>{{ emp[0] }}</td>
+                        <td>{{ emp[1] }}</td>
+                        <td>{{ emp[2] }}</td>
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

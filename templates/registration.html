@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="sidebar">
+         <span id="emp">Employees</span><br><br>
+        <a href="{{url_for('home')}}">
+            <!-- <img src="—Pngtree—home icon simple  symbol_3566362.png" alt="Home"> -->
+            <span>Home</span>
+        </a><br><br>
+        <a href="{{url_for('register')}}">
+            <!-- <img src="f8f58a9e-37b9-444e-9aea-22f72967e96b.jpg" alt="Registeration"> -->
+            <span>Registration</span>
+        </a> <br><br>
+        <a href="{{url_for('employee')}}">
+
+            <span>Employees</span>
+        </a><br><br>
+        <a href="{{ url_for('training')}}">
+
+            <span>Training & Courses</span>
+        </a>
+ </div>
+    <div class="form-container">
+        <div class="form-section">
+            <form id="registrationForm" action="/register" method="POST">
+            <h1 id="heading">Employee Registration</h1><br>
+            </div>
+            <h2 id="pr">Personal Details</h2>
+            <div class="form-row">
+            <label class="Name">Name:</label>
+            <input type="text" name="name" placeholder="Ex:Omkar Vishal Patil">
+            
+            <label class="DOB">Date of Birth:</label>
+            <input type="date" name="dob"><br><br>
+            </div>
+            <div class="form-row">
+            <label class="Email:">Email:</label>
+            <input type="email" name="email" placeholder="Ex:Cp123@gmail.com">
+            <label class="Phone">Mobile Number:</label>
+            <input type="tel" name="mobile"><br><br>
+            </div>
+            <div class="form-row">
+            <label class="gender">Gender:</label>
+            <select name="gender">
+                <option values="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <label class="Address">Address:</label>
+            <input type="text" name="address" placeholder="Enter Your Address"><br><br>
+            </div>
+            <div class="form-row">
+            <label class="state">State:</label>
+            <!-- <select name="state">
+                <option value="">Select Your State</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chhatisgarh">Chhatisgarh</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamilnadu">Tamilnadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+            </select> -->
+           <select name="state" id="state">
+    <option value="">Select Your State</option>
+    <option value="Andhra Pradesh">Andhra Pradesh</option>
+    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+    <option value="Assam">Assam</option>
+    <option value="Bihar">Bihar</option>
+    <option value="Chhatisgarh">Chhatisgarh</option>
+    <option value="Goa">Goa</option>
+    <option value="Gujrat">Gujrat</option>
+    <option value="Haryana">Haryana</option>
+    <option value="Himachal Pradesh">Himachal Pradesh</option>
+    <option value="Jharkhand">Jharkhand</option>
+    <option value="Karnataka">Karnataka</option>
+    <option value="Kerala">Kerala</option>
+    <option value="Madhya Pradesh">Madhya Pradesh</option>
+    <option value="Maharashtra">Maharashtra</option>
+    <option value="Manipur">Manipur</option>
+    <option value="Meghalaya">Meghalaya</option>
+    <option value="Mizoram">Mizoram</option>
+    <option value="Nagaland">Nagaland</option>
+    <option value="Odisha">Odisha</option>
+    <option value="Punjab">Punjab</option>
+    <option value="Rajasthan">Rajasthan</option>
+    <option value="Sikkim">Sikkim</option>
+    <option value="Tamil Nadu">Tamil Nadu</option>
+    <option value="Telangana">Telangana</option>
+    <option value="Tripura">Tripura</option>
+    <option value="Uttar Pradesh">Uttar Pradesh</option>
+    <option value="Uttarakhand">Uttarakhand</option>
+    <option value="West Bengal">West Bengal</option>
+</select><br><br> 
+            <label class="city">City:</label>
+            <select id="city" name="city">
+                <option value="">Select Your City</option>
+            </select>
+            </div>
+            <div class="form-row">
+            <label class="Pincode">Pincode:</label>
+            <input type="text" name="pincode">
+            </div>
+            
+        
+        <br>
+        <hr>
+        <div class="form-section">
+        <h2>Employee Information</h2>
+        <div class="form-row">
+            <label class="department">Department:</label>
+            <select name="department">
+                <option value="">Select Department</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Finance">Finance</option>
+                <option value="IT">IT</option>
+                <option value="Sales">Sales</option>
+                <option value="Housekeeping">House Keeping</option>
+            </select><br><br>
+            </div>
+            <div class="form-row">
+            <label class="job">Designation:</label>
+            <input type="text" name="designation"placeholder="Ex:Ai Engineer"><br><br>
+            </div>
+            <div class="form-row">
+            <label class="Date_of_joining">Date of Joining:</label>
+            <input type="date" name="date_of_joining"><br><br>
+            </div>
+            <div class="form-row">
+            <label class="employee_type">Employee Type:</label>
+            <select name="employee_type">
+                <option value="">Select Employee Type</option>
+                <option value="Full_time">Full Time</option>
+                <option value="Part_time">Part Time</option>
+                <option value="Intern">Intern</option>
+            </select>
+            </div>
+            
+            
+            
+        <br>
+        
+    <div class="form-section">
+        <button type="submit">Register</button>
+        <button type="reset">Reset</button>
+        </div>
+        </form>
+        
+</body>
+<script src="/static/script.js"></script>
+</html>
