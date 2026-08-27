@@ -126,12 +126,12 @@ def training():
             TRAINING.end_date,
             TRAINING.status
 
-        FROM TRAINING
+        FROM training
 
-        LEFT JOIN EMP
-        ON TRAINING.employee_id = EMP.ID
+        LEFT JOIN emp
+        ON training.employee_id = emp.ID
 
-        ORDER BY TRAINING.training_id DESC
+        ORDER BY training.training_id DESC
     """)
 
     records = cursor.fetchall()
