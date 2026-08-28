@@ -1726,258 +1726,100 @@ body {
    MOBILE
 ========================================= */
 
+/* =========================
+   MOBILE VIEW
+   ========================= */
+
 @media (max-width: 768px) {
 
-    /* =====================================
-       TOP NAVBAR
-    ===================================== */
-
+    /* Sidebar becomes TOP NAVBAR */
     .sidebar {
-        position: relative;
-        top: 0;
-        left: 0;
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
 
-        width: 100%;
-        height: auto;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
 
-        padding: 0;
+        padding: 0 !important;
+        margin: 0 !important;
 
-        display: flex;
-        align-items: center;
-
-        background: #0f514c;
-
-        overflow: visible;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
     }
 
-    /* Employees title */
-
+    /* Employees heading */
     .sidebar #emp {
-        display: none;
+        display: none !important;
     }
 
-    /* Navbar links */
-
+    /* Sidebar links */
     .sidebar a {
-        display: block;
+        display: block !important;
 
-        width: auto;
+        width: auto !important;
+        min-width: auto !important;
 
-        padding: 20px 25px;
-        margin: 0;
+        padding: 22px 25px !important;
+        margin: 0 !important;
 
-        color: white;
-
-        font-size: 18px;
-        font-weight: 500;
-
-        white-space: nowrap;
-
-        border-radius: 0;
-
-        text-decoration: none;
+        text-decoration: none !important;
+        white-space: nowrap !important;
     }
 
-    .sidebar a:hover,
-    .sidebar a.active {
-        background: rgba(255,255,255,0.12);
+    .sidebar span {
+        display: inline !important;
     }
 
+    /* Main content */
+    .training-container,
+    .container,
+    .employee-container,
+    .registration-container {
+        width: 100% !important;
+        max-width: 100% !important;
 
-    /* =====================================
-       MAIN CONTENT
-    ===================================== */
+        margin-left: 0 !important;
+        margin-right: 0 !important;
 
-    .dashboard,
-    .dashboard-container,
-    .home-container,
-    .main-content,
-    .form-container,
-    .training-container {
-
-        margin-left: 0;
-
-        width: 100%;
-
-        min-height: auto;
-
-        padding: 25px 20px;
+        padding: 20px !important;
+        box-sizing: border-box !important;
     }
 
-
-    /* =====================================
-       HEADINGS
-    ===================================== */
-
-    .dashboard h1,
-    .dashboard-container h1,
-    .home-container h1,
-    .main-content h1,
+    /* Headings */
     .training-container h1 {
-
-        font-size: 32px;
-
-        margin-top: 0;
-        margin-bottom: 25px;
+        font-size: 28px !important;
     }
 
-
-    /* =====================================
-       DASHBOARD CARDS
-    ===================================== */
-
-    .cards,
-    .dashboard-cards,
-    .card-container {
-
-        grid-template-columns: 1fr;
-
-        width: 100%;
-
-        gap: 15px;
-    }
-
-    .card {
-        min-height: 110px;
-        padding: 20px;
-    }
-
-
-    /* =====================================
-       EMPLOYEE ACTION
-    ===================================== */
-
-    .employee-action {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 12px;
-    }
-
-    .add-btn {
-        width: 100%;
-        text-align: center;
-    }
-
-    .employee-action input {
-        width: 100%;
-    }
-
-
-    /* =====================================
-       EMPLOYEE TABLE
-    ===================================== */
-
-    .main-content {
-        overflow-x: auto;
-    }
-
-    .employee-table {
-        min-width: 650px;
-    }
-
-
-    /* =====================================
-       REGISTRATION FORM
-    ===================================== */
-
-    .form-container {
-        padding: 20px;
-    }
-
-    .form-section {
-        width: 100%;
-        padding: 20px;
-        margin: 0 0 25px 0;
-    }
-
-    .form-row {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-
-        gap: 6px;
-        margin-bottom: 18px;
-    }
-
-    .form-row label {
-        font-size: 16px;
-    }
-
-    .form-row input,
-    .form-row select {
-        width: 100%;
-        min-height: 48px;
-    }
-
-    .form-section button {
-        width: 100%;
-        margin: 5px 0;
-    }
-
-
-    /* =====================================
-       TRAINING FORM
-    ===================================== */
-
-    .training-container {
-        padding: 20px;
-    }
-
+    /* Training form */
     .training-form {
-        width: 100%;
-        max-width: none;
-
-        padding: 18px;
-
-        margin: 0 0 20px 0;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
     }
 
+    .training-form form {
+        width: 100% !important;
+    }
+
+    /* Form inputs */
     .training-form input,
     .training-form select {
-
-        width: 100%;
-        max-width: none;
-
-        min-height: 45px;
-
-        margin-bottom: 10px;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
 
-    .training-form button {
-        width: 100%;
-        margin-top: 5px;
-    }
-
-
-    /* =====================================
-       TRAINING RECORDS
-    ===================================== */
-
+    /* Training records */
     .training-records {
-
-        width: 100%;
-        max-width: none;
-
-        padding: 15px;
-
-        overflow-x: auto;
-
-        border-radius: 12px;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        overflow-x: auto !important;
     }
 
     .training-records table {
-
-        min-width: 850px;
-        width: max-content;
-    }
-
-    .training-records th,
-    .training-records td {
-
-        padding: 11px 9px;
-
-        font-size: 13px;
-
-        white-space: nowrap;
+        width: max-content !important;
+        min-width: 800px !important;
     }
 }
