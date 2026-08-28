@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding:0;
 }
@@ -6,7 +6,7 @@ body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: #f1f5f3;
     margin-left: 180px;
-    /* margin-top: 10px; */
+    /* margin-top: 10px; *
     margin-bottom: 20px;
 
 }
@@ -42,7 +42,7 @@ h2{
 }
 .sidebar a{
     display:flex;
-    /* background-color: #f8f8f9; */
+    /* background-color: #f8f8f9; *
     width: 100%;
     height: 35px;
     text-align: center;
@@ -75,7 +75,7 @@ h2{
 span{
     color: rgb(157, 157, 33);
     font-size: larger;
-    /* color:#c9fdef */
+    /* color:#c9fdef *
 }
 #emp{
     font-size: x-large;
@@ -100,7 +100,7 @@ span{
 .form-row input,
 .form-row select{
     height:38px;
-    /* padding: 0 10px; */
+    /* padding: 0 10px; *
     border:1px solid;
     border-radius: 7px;
     font-family: inherit;
@@ -109,7 +109,7 @@ span{
     width: 220px;
     height: 38px;
     /* outline: none; */
-    /* padding-right: 25px; */
+    /* padding-right: 25px; *
 
 }
 .form-row input:focus,
@@ -120,9 +120,9 @@ span{
 }
 button{
     
-    /* border:none; */
+    /* border:none; *
     border-radius: 18px;
-    /* display: block; */
+    /* display: block; *
     width:80px;
     height:20px;
     size:25px;
@@ -131,7 +131,7 @@ button{
     font-size: medium;
     font-weight: 600;
     margin-left: 250px;
-    /* justify-content: center; */
+    /* justify-content: center; *
     gap: 80px;
     margin-bottom:30px;
     background-color: #1a3258;
@@ -143,7 +143,7 @@ button{
 }
 .reset{
     background-color: #e5e7eb;
-    color:#333; */
+    color:#333; *
 
 h1{
     text-align: center;
@@ -205,7 +205,7 @@ h1{
     width:40%;
 }
 .salary-table tbody tr:hover{
-    /* transform: translateY(10px); */
+    /* transform: translateY(10px); *
     background-color: #d6d9dec9;
     animation-duration: 4ms;
 
@@ -294,7 +294,7 @@ h1{
     .cards{
         width: 260px;
     }
-} */
+} *
  .dashboard {
     margin-left: 20px;
     padding: 30px 40px;
@@ -335,7 +335,7 @@ h1{
     box-shadow: 0 4px 10px rgba(0,0,0,0.12);
 }
 
-/* CARD TITLE */
+/* CARD TITLE *
 .cards {
     display: flex;
     gap: 25px;
@@ -365,7 +365,7 @@ h1{
 }
 
 
-/* CARD NUMBER */
+/* CARD NUMBER *
 .card p {
     margin: 0;
     font-size: 32px;
@@ -465,7 +465,7 @@ h1{
     width:40%;
 }
 .employee-table tbody tr:hover{
-    /* transform: translateY(10px); */
+    /* transform: translateY(10px); *
     background-color: #d6d9dec9;
     animation-duration: 4ms;
 
@@ -486,7 +486,7 @@ h1{
 } */
 
 
-/* ---------- MAIN CONTENT ---------- */
+/* ---------- MAIN CONTENT ---------- *
 
 .main-b {
     margin-left: 25px;
@@ -494,7 +494,7 @@ h1{
 }
 
 
-/* ---------- HEADING ---------- */
+/* ---------- HEADING ---------- *
  .main-b h1 {
     text-align: center;
 
@@ -505,7 +505,7 @@ h1{
     color: #111;
 }
 
-/* ---------- ASSIGN TRAINING BOX ---------- */
+/* ---------- ASSIGN TRAINING BOX ---------- *
 .training-form {
     width: 650px;
     margin: 0 auto 45px auto;
@@ -540,14 +540,14 @@ h1{
 }
 
 
-/* Assign Button */
+/* Assign Button *
 
 .training-form button {
     display: block;
      margin: 25px auto 5px auto; 
-    /* padding: 10px 30px; */
+    /* padding: 10px 30px; *
     border: none;
-    /* border-radius: 20px; */
+    /* border-radius: 20px; *
     background: #006b4f;
     color: white;
     font-size: 15px;
@@ -563,7 +563,7 @@ h1{
 }
 
 
-/* ===== Training Records ===== */
+/* ===== Training Records ===== *
 
 .records {
     width: 95%;
@@ -605,7 +605,7 @@ h1{
 }
 
 
-/* HEADING */
+/* HEADING *
 
 .main-d h1 {
     font-size: 34px;
@@ -614,7 +614,7 @@ h1{
 }
 
 
-/* CARDS */
+/* CARDS *
 
 .dashboard-cards {
     display: flex;
@@ -646,7 +646,7 @@ h1{
 }
 
 
-/* RECENT EMPLOYEE */
+/* RECENT EMPLOYEE *
 
 .recent-section {
     background: white;
@@ -671,7 +671,7 @@ h1{
 }
 
 
-/* VIEW ALL BUTTON */
+/* VIEW ALL BUTTON *
 
 .view-btn {
     text-decoration: none;
@@ -687,7 +687,7 @@ h1{
 }
 
 
-/* TABLE */
+/* TABLE *
 
 .dashboard-table {
     width: 100%;
@@ -835,10 +835,10 @@ h1{
 } */ 
 
 
-/* Extra small mobile screens */
+/* Extra small mobile screens *
 @media (max-width: 768px) {
 
-    /* Sidebar becomes normal top section */
+    /* Sidebar becomes normal top section *
     .sidebar {
         position: relative;
 
@@ -863,8 +863,8 @@ h1{
     }
 
 
-    /* Main content */
-    .main-content,
+    /* Main content *
+        .main-content,
     .main-d,
     .main-b {
         width: 100%;
@@ -886,7 +886,7 @@ h1{
     }
 
 
-    /* Dashboard cards */
+    /* Dashboard cards *
     .dashboard-cards {
         grid-template-columns: 1fr;
 
@@ -898,7 +898,7 @@ h1{
     }
 
 
-    /* Recent section */
+    /* Recent section *
     .recent-section {
         padding: 15px;
 
@@ -916,7 +916,7 @@ h1{
     }
 
 
-    /* Employee search */
+    /* Employee search *
     .employee-action {
         flex-direction: column;
 
@@ -932,7 +932,7 @@ h1{
     }
 
 
-    /* Employee table */
+    /* Employee table *
     .main-content {
         overflow-x: hidden;
     }
@@ -942,7 +942,7 @@ h1{
     }
 
 
-    /* Registration */
+    /* Registration *
     .form-container {
         width: 100%;
 
@@ -981,7 +981,7 @@ h1{
     }
 
 
-    /* Registration buttons */
+    /* Registration buttons *
     .form-section button {
         width: 100%;
 
@@ -989,7 +989,7 @@ h1{
     }
 
 
-    /* Training */
+    /* Training *
     .training-form,
     .records {
         padding: 18px 15px;
@@ -1023,7 +1023,7 @@ h1{
     }
 
 
-    /* Training table can scroll horizontally */
+    /* Training table can scroll horizontally *
     .records {
         overflow-x: auto;
     }
@@ -1036,7 +1036,7 @@ h1{
 
 /* =========================================
    SMALL MOBILE
-========================================= */
+========================================= *
 
 @media (max-width: 480px) {
 
@@ -1080,5 +1080,593 @@ h1{
     .records,
     .recent-section {
         padding: 15px 10px;
+    }
+} */
+ /* ================================
+   BASIC RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7f6;
+    color: #173f39;
+    min-height: 100vh;
+}
+
+
+/* ================================
+   MAIN PAGE LAYOUT
+================================ */
+
+body {
+    display: flex;
+}
+
+
+/* ================================
+   SIDEBAR
+================================ */
+
+.sidebar {
+    width: 240px;
+    min-height: 100vh;
+
+    background: #064f43;
+
+    padding: 35px 20px;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: 3px 0 15px rgba(0, 0, 0, 0.12);
+
+    z-index: 1000;
+}
+
+
+/* Employees heading */
+
+.sidebar #emp {
+    color: #d6bd3f;
+    font-size: 28px;
+    font-weight: bold;
+
+    margin-bottom: 35px;
+}
+
+
+/* Remove your <br><br> spacing */
+
+.sidebar br {
+    display: none;
+}
+
+
+/* Sidebar links */
+
+.sidebar a {
+    width: 100%;
+
+    min-height: 65px;
+
+    margin-bottom: 18px;
+
+    background: #ffffff;
+
+    color: #8e8b25;
+
+    text-decoration: none;
+
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 19px;
+    font-weight: bold;
+
+    transition: all 0.25s ease;
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Hover */
+
+.sidebar a:hover {
+    background: #d6bd3f;
+    color: #064f43;
+
+    transform: translateX(5px);
+
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ================================
+   MAIN CONTENT
+================================ */
+
+.main-d {
+    width: calc(100% - 240px);
+
+    min-height: 100vh;
+
+    margin-left: 240px;
+
+    padding: 50px;
+
+    overflow-x: hidden;
+}
+
+
+/* Page heading */
+
+.main-d > h1 {
+    text-align: center;
+
+    font-size: 42px;
+
+    color: #064f43;
+
+    margin-bottom: 45px;
+}
+
+
+/* ================================
+   DASHBOARD CARDS
+================================ */
+
+.dashboard-cards {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+
+    gap: 25px;
+
+    margin-bottom: 40px;
+}
+
+
+.dashboard-card {
+    background: white;
+
+    min-height: 160px;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.dashboard-card h3 {
+    color: #555;
+
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+
+.dashboard-card p {
+    color: #159447;
+
+    font-size: 42px;
+
+    font-weight: bold;
+}
+
+
+/* ================================
+   RECENT EMPLOYEES
+================================ */
+
+.recent-section {
+    width: 100%;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    overflow-x: auto;
+}
+
+
+/* Header */
+
+.section-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+
+.section-header h2 {
+    color: #064f43;
+
+    font-size: 28px;
+}
+
+
+/* View All button */
+
+.view-btn {
+    display: inline-block;
+
+    background: #159447;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 25px;
+
+    border-radius: 10px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    transition: 0.25s;
+}
+
+
+.view-btn:hover {
+    background: #064f43;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   DASHBOARD TABLE
+================================ */
+
+.dashboard-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 550px;
+}
+
+
+.dashboard-table thead {
+    background: #064f43;
+
+    color: white;
+}
+
+
+.dashboard-table th {
+    padding: 16px;
+
+    text-align: left;
+
+    font-size: 17px;
+}
+
+
+.dashboard-table td {
+    padding: 16px;
+
+    border-bottom: 1px solid #ddd;
+
+    font-size: 16px;
+
+    color: #222;
+}
+
+
+.dashboard-table tbody tr:hover {
+    background: #f1f7f5;
+}
+
+
+/* ================================
+   OTHER PAGE TABLES
+================================ */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+table th {
+    background: #064f43;
+
+    color: white;
+
+    padding: 15px;
+
+    text-align: left;
+}
+
+
+table td {
+    padding: 15px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* ================================
+   FORMS
+================================ */
+
+form {
+    background: white;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #159447;
+
+    box-shadow: 0 0 0 3px rgba(21, 148, 71, 0.1);
+}
+
+
+form button {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #159447;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+form button:hover {
+    background: #064f43;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+
+    body {
+        display: block;
+    }
+
+
+    /* Sidebar becomes top menu */
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 20px 15px;
+
+        display: flex;
+
+        align-items: center;
+    }
+
+
+    .sidebar #emp {
+        font-size: 25px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .sidebar a {
+        width: 100%;
+
+        min-height: 55px;
+
+        margin-bottom: 12px;
+
+        border-radius: 12px;
+
+        font-size: 17px;
+    }
+
+
+    /* Main content */
+
+    .main-d {
+        width: 100%;
+
+        margin-left: 0;
+
+        padding: 25px 15px;
+    }
+
+
+    .main-d > h1 {
+        font-size: 32px;
+
+        margin-bottom: 30px;
+    }
+
+
+    /* Cards one below another */
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .dashboard-card {
+        min-height: 130px;
+
+        padding: 25px;
+    }
+
+
+    .dashboard-card h3 {
+        font-size: 20px;
+    }
+
+
+    .dashboard-card p {
+        font-size: 36px;
+    }
+
+
+    /* Recent section */
+
+    .recent-section {
+        padding: 20px;
+
+        border-radius: 15px;
+    }
+
+
+    .section-header {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        text-align: center;
+    }
+
+
+    .section-header h2 {
+        font-size: 25px;
+    }
+
+
+    .view-btn {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    /* Table scroll */
+
+    .dashboard-table {
+        min-width: 500px;
+    }
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 480px) {
+
+    .sidebar {
+        padding: 15px 12px;
+    }
+
+
+    .sidebar a {
+        min-height: 52px;
+
+        font-size: 16px;
+    }
+
+
+    .main-d {
+        padding: 20px 12px;
+    }
+
+
+    .main-d > h1 {
+        font-size: 28px;
+    }
+
+
+    .dashboard-card {
+        padding: 20px;
+    }
+
+
+    .recent-section {
+        padding: 15px;
     }
 }
