@@ -98,46 +98,83 @@ def employee():
      cursor.close()
 
      return render_template("employee.html", employees=employees)
-@app.route("/training")
+# @app.route("/training")
+# def training():
+
+#     db = get_db_connection()
+#     cursor = db.cursor(dictionary=True)
+
+#     # Registered employees
+#     cursor.execute("""
+#         SELECT ID, emp_Name, Department, designation
+#         FROM EMP
+#         ORDER BY emp_Name
+#     """)
+
+#     employees = cursor.fetchall()
+
+#     # Training records
+#     cursor.execute("""
+#         SELECT
+#             TRAINING.training_id,
+#             EMP.ID AS employee_id,
+#             EMP.emp_Name AS employee_name,
+#             EMP.Department AS department,
+#             TRAINING.course_name,
+#             TRAINING.trainer,
+#             TRAINING.start_date,
+#             TRAINING.end_date,
+#             TRAINING.status
+
+#         FROM training
+
+#         LEFT JOIN emp
+#         ON training.employee_id = emp.ID
+
+#         ORDER BY training.training_id DESC
+#     """)
+
+#     records = cursor.fetchall()
+
+#     cursor.close()
+#     db.close()
+
+#     return render_template(
+#         "training.html",
+#         employees=employees,
+#         records=records
+#     )
+@app.route('/training', methods=['GET', 'POST'])
 def training():
-
     db = get_db_connection()
-    cursor = db.cursor(dictionary=True)
+    cursor = db.cursor()
 
-    # Registered employees
+    # Employees load karo
     cursor.execute("""
         SELECT ID, emp_Name, Department, designation
         FROM EMP
         ORDER BY emp_Name
     """)
-
     employees = cursor.fetchall()
 
-    # Training records
+    # Training records load karo
     cursor.execute("""
         SELECT
-            TRAINING.training_id,
-            EMP.ID AS employee_id,
-            EMP.emp_Name AS employee_name,
-            EMP.Department AS department,
-            TRAINING.course_name,
-            TRAINING.trainer,
-            TRAINING.start_date,
-            TRAINING.end_date,
-            TRAINING.status
-
-        FROM training
-
-        LEFT JOIN emp
-        ON training.employee_id = emp.ID
-
-        ORDER BY training.training_id DESC
+            t.training_id,
+            t.employee_id,
+            e.emp_Name AS employee_name,
+            e.Department AS department,
+            e.designation AS designation,
+            t.course_name,
+            t.trainer,
+            t.start_date,
+            t.end_date,
+            t.status
+        FROM TRAINING t
+        JOIN EMP e ON t.employee_id = e.ID
+        ORDER BY t.start_date DESC
     """)
-
     records = cursor.fetchall()
-
-    cursor.close()
-    db.close()
 
     return render_template(
         "training.html",
