@@ -2,46 +2,6 @@
 <html>
 <head>
     <title>Training & Courses</title>
-
-    <!-- <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 30px;
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-
-        .salary-box {
-            background-color: white;
-            width: 90%;
-            margin: auto;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #e8e8e8;
-        }
-
-        .total {
-            font-weight: bold;
-        }
-    </style> -->
     <link rel="stylesheet" href="/static/style.css">
 </head>
 
@@ -113,7 +73,7 @@
                    name="end_date">
 
 
-            <button type="submit">
+            <button type="submit"onclick="return confirmAssign()">
                 Assign
             </button>
 
@@ -168,4 +128,6 @@
 
 </div>
 </body>
+<script>function confirmAssign(){
+    return confirm("Are you sure you want to assign this training ?");}</script>
 </html>
