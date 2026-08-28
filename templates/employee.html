@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Employee List</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
@@ -32,10 +32,11 @@
             <a href="{{ url_for('register')}}"class="add-btn">+Add Employee</a>
         <input 
         type="text" placeholder="Search Employee...."
+        id="searchEmployee"
         onkeyup="searchEmployee()">
         </div>
 
-        <table class="employee-table">
+        <table id="employeeTable" class="employee-table">
             <thead>
                 <tr>
                     <th>Employee Id</th>
