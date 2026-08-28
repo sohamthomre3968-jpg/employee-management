@@ -147,7 +147,7 @@ def employee():
 @app.route('/training', methods=['GET', 'POST'])
 def training():
     db = get_db_connection()
-    cursor = db.cursor()
+    cursor = db.cursor(dictionary=True)
 
     # Employees load karo
     cursor.execute("""
