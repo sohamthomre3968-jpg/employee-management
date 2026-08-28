@@ -181,37 +181,67 @@ def training():
         employees=employees,
         records=records
     )
-@app.route("/add-training", methods=["POST"])
+# @app.route("/add-training", methods=["POST"])
+# def add_training():
+
+#     db = get_db_connection()
+#     employee_id = request.form["employee_id"]
+#     course_name = request.form["course_name"]
+#     trainer = request.form["trainer"]
+#     start_date = request.form["start_date"]
+#     end_date = request.form["end_date"]
+
+#     cursor = db.cursor()
+
+#     cursor.execute("""
+#         INSERT INTO TRAINING
+#         (
+#             employee_id,
+#             course_name,
+#             trainer,
+#             start_date,
+#             end_date,
+#             status
+#         )
+
+#         VALUES (%s, %s, %s, %s, %s, %s)
+#     """, (
+#         employee_id,
+#         course_name,
+#         trainer,
+#         start_date,
+#         end_date,
+#         "Not Started"
+#     ))
+
+#     db.commit()
+
+#     cursor.close()
+#     db.close()
+
+#     return redirect(url_for("training"))
+@app.route('/add-training', methods=['POST'])
 def add_training():
 
     db = get_db_connection()
-    employee_id = request.form["employee_id"]
-    course_name = request.form["course_name"]
-    trainer = request.form["trainer"]
-    start_date = request.form["start_date"]
-    end_date = request.form["end_date"]
-
     cursor = db.cursor()
+
+    employee_id = request.form['employee_id']
+    course_name = request.form['course_name']
+    trainer = request.form['trainer']
+    start_date = request.form['start_date']
+    end_date = request.form['end_date']
 
     cursor.execute("""
         INSERT INTO TRAINING
-        (
-            employee_id,
-            course_name,
-            trainer,
-            start_date,
-            end_date,
-            status
-        )
-
-        VALUES (%s, %s, %s, %s, %s, %s)
+        (employee_id, course_name, trainer, start_date, end_date)
+        VALUES (%s, %s, %s, %s, %s)
     """, (
         employee_id,
         course_name,
         trainer,
         start_date,
-        end_date,
-        "Not Started"
+        end_date
     ))
 
     db.commit()
@@ -219,6 +249,6 @@ def add_training():
     cursor.close()
     db.close()
 
-    return redirect(url_for("training"))
+    return redirect(url_for('training'))
 if __name__ == "__main__":
     app.run(debug=True)
