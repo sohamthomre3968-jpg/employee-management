@@ -1483,6 +1483,7 @@ body {
 
 .form-container {
     padding: 40px;
+    margin-left:25px;
 }
 
 .form-section {
@@ -1894,6 +1895,7 @@ body {
     ----------------------------------------- */
 
     .form-container {
+        margin-left: 25%;
 
         padding: 20px;
     }
