@@ -1086,23 +1086,33 @@ h1{
    RESET
 ================================ */
 
+/* =========================================
+   RESET
+========================================= */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
+    width: 100%;
+    min-height: 100vh;
     font-family: Arial, sans-serif;
     background: #f4f7f6;
     color: #174f48;
 }
 
 
-/* ================================
-   SIDEBAR
-   SAME ON ALL PAGES
-================================ */
+/* =========================================
+   SIDEBAR - DESKTOP
+========================================= */
 
 .sidebar {
     position: fixed;
@@ -1112,9 +1122,9 @@ body {
     width: 250px;
     height: 100vh;
 
-    background: #075746;
-
     padding: 35px 20px;
+
+    background: #075746;
 
     z-index: 1000;
 
@@ -1138,7 +1148,7 @@ body {
 }
 
 
-/* Remove ugly <br> effect */
+/* Hide br */
 
 .sidebar br {
     display: none;
@@ -1158,8 +1168,7 @@ body {
 
     margin-bottom: 22px;
 
-    background: #ffffff;
-
+    background: white;
     color: #817d28;
 
     text-decoration: none;
@@ -1169,11 +1178,9 @@ body {
     font-size: 20px;
     font-weight: bold;
 
-    transition: all 0.25s ease;
+    transition: 0.25s ease;
 }
 
-
-/* Hover */
 
 .sidebar a:hover {
     background: #e5c62b;
@@ -1183,42 +1190,38 @@ body {
 }
 
 
-/* Active/click effect */
-
-.sidebar a:active {
-    transform: scale(0.98);
-}
-
-
-/* ================================
-   MAIN CONTENT
-================================ */
+/* =========================================
+   MAIN CONTENT - DESKTOP
+========================================= */
 
 .main-d {
+    position: relative;
+
     margin-left: 250px;
 
     width: calc(100% - 250px);
-
     min-height: 100vh;
 
     padding: 45px 50px;
+
+    overflow-x: hidden;
 }
 
 
-/* Page headings */
+/* Page heading */
 
 .main-d > h1 {
     color: #174f48;
 
     font-size: 42px;
 
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 
-/* ================================
+/* =========================================
    DASHBOARD CARDS
-================================ */
+========================================= */
 
 .dashboard-cards {
     display: grid;
@@ -1227,9 +1230,10 @@ body {
 
     gap: 25px;
 
-    margin-bottom: 35px;
-
+    width: 100%;
     max-width: 800px;
+
+    margin-bottom: 35px;
 }
 
 
@@ -1262,11 +1266,14 @@ body {
 }
 
 
-/* ================================
+/* =========================================
    RECENT EMPLOYEES
-================================ */
+========================================= */
 
 .recent-section {
+    width: 100%;
+    max-width: 950px;
+
     background: white;
 
     padding: 30px;
@@ -1274,8 +1281,6 @@ body {
     border-radius: 22px;
 
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-
-    max-width: 950px;
 
     overflow-x: auto;
 }
@@ -1285,7 +1290,6 @@ body {
     display: flex;
 
     justify-content: space-between;
-
     align-items: center;
 
     gap: 20px;
@@ -1305,7 +1309,6 @@ body {
     display: inline-block;
 
     background: #159447;
-
     color: white;
 
     text-decoration: none;
@@ -1315,8 +1318,6 @@ body {
     border-radius: 10px;
 
     font-weight: bold;
-
-    transition: 0.2s;
 }
 
 
@@ -1325,9 +1326,9 @@ body {
 }
 
 
-/* ================================
+/* =========================================
    TABLE
-================================ */
+========================================= */
 
 .dashboard-table {
     width: 100%;
@@ -1335,10 +1336,6 @@ body {
     border-collapse: collapse;
 
     background: white;
-
-    overflow: hidden;
-
-    border-radius: 15px;
 }
 
 
@@ -1376,18 +1373,26 @@ body {
 }
 
 
-/* ================================
+/* =========================================
    EMPLOYEE LIST
-================================ */
+========================================= */
 
 .main-d a[href*="register"] {
+    display: inline-block;
+
     color: #174f48;
 
     font-weight: bold;
 
     margin-right: 10px;
+
+    margin-bottom: 15px;
 }
 
+
+/* =========================================
+   INPUTS
+========================================= */
 
 input[type="text"],
 input[type="email"],
@@ -1395,9 +1400,11 @@ input[type="number"],
 input[type="date"],
 select,
 textarea {
+    max-width: 100%;
+
     padding: 10px 12px;
 
-    border: 1px solid #bbb;
+    border: 1px solid #aaa;
 
     border-radius: 8px;
 
@@ -1418,20 +1425,25 @@ textarea:focus {
 }
 
 
-/* ================================
+/* =========================================
    REGISTRATION FORM
-================================ */
+========================================= */
 
 form {
-    background: white;
+    position: relative;
 
+    width: 100%;
     max-width: 900px;
+
+    background: white;
 
     padding: 35px;
 
     border-radius: 22px;
 
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    overflow: hidden;
 }
 
 
@@ -1476,6 +1488,8 @@ form textarea {
     margin: 5px 15px 15px 0;
 
     min-height: 42px;
+
+    max-width: 100%;
 }
 
 
@@ -1486,7 +1500,9 @@ form textarea {
 }
 
 
-/* Buttons */
+/* =========================================
+   BUTTONS
+========================================= */
 
 button,
 input[type="submit"],
@@ -1518,58 +1534,236 @@ input[type="reset"]:hover {
 }
 
 
-/* ================================
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .main-d {
+        padding: 35px 30px;
+    }
+
+    form {
+        max-width: 100%;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================
    MOBILE
-================================ */
+========================================= */
 
 @media (max-width: 768px) {
 
-    /* Sidebar becomes top navigation */
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* -------------------------
+       TOP NAVIGATION
+    ------------------------- */
 
     .sidebar {
         position: relative;
 
-        width: 100%;
+        top: auto;
+        left: auto;
 
+        width: 100%;
         height: auto;
 
-        padding: 22px 20px 25px;
+        padding: 28px 22px 30px;
+
+        overflow: visible;
     }
 
 
     .sidebar #emp {
-        font-size: 28px;
+        font-size: 30px;
 
-        margin-bottom: 25px;
+        margin-bottom: 28px;
     }
 
 
     .sidebar a {
-        min-height: 58px;
+        width: 100%;
 
-        margin-bottom: 12px;
+        min-height: 64px;
 
-        border-radius: 15px;
+        margin-bottom: 14px;
 
-        font-size: 18px;
+        border-radius: 17px;
+
+        font-size: 19px;
+
+        transform: none !important;
     }
 
 
-    /* Main content */
+    /* -------------------------
+       MAIN CONTENT
+    ------------------------- */
 
     .main-d {
+        position: relative;
+
         margin-left: 0;
 
         width: 100%;
 
-        padding: 25px 15px;
+        padding: 25px 15px 40px;
+
+        overflow-x: hidden;
     }
 
 
     .main-d > h1 {
         font-size: 36px;
 
+        line-height: 1.15;
+
         margin-bottom: 25px;
+    }
+
+
+    /* -------------------------
+       EMPLOYEE LIST
+    ------------------------- */
+
+    .main-d a[href*="register"] {
+        display: inline-block;
+
+        font-size: 18px;
+
+        margin-bottom: 12px;
+    }
+
+
+    /* Search */
+
+    .main-d input[type="text"] {
+        width: 100%;
+
+        max-width: 100%;
+
+        min-height: 48px;
+
+        font-size: 17px;
+
+        margin-bottom: 15px;
+    }
+
+
+    /* -------------------------
+       TABLE
+    ------------------------- */
+
+    .dashboard-table {
+        min-width: 600px;
+    }
+
+
+    .recent-section {
+        width: 100%;
+
+        padding: 15px;
+
+        overflow-x: auto;
+    }
+
+
+    .dashboard-table th,
+    .dashboard-table td {
+        padding: 15px;
+    }
+
+
+    /* -------------------------
+       FORM
+    ------------------------- */
+
+    form {
+        width: 100%;
+
+        max-width: 100%;
+
+        padding: 22px 18px;
+
+        border-radius: 18px;
+
+        overflow: visible;
+    }
+
+
+    form h1 {
+        font-size: 32px;
+
+        line-height: 1.2;
+
+        margin-bottom: 30px;
+    }
+
+
+    form h2 {
+        font-size: 24px;
+
+        margin-top: 25px;
+    }
+
+
+    /* IMPORTANT:
+       Every label becomes separate row
+    */
+
+    form label {
+        display: block;
+
+        width: 100%;
+
+        font-size: 17px;
+
+        margin: 15px 0 6px;
+    }
+
+
+    form input,
+    form select,
+    form textarea {
+        display: block;
+
+        width: 100% !important;
+
+        max-width: 100%;
+
+        margin: 0 0 15px 0;
+
+        min-height: 46px;
+
+        font-size: 16px;
+    }
+
+
+    form textarea {
+        min-height: 100px;
+    }
+
+
+    /* Buttons */
+
+    button,
+    input[type="submit"],
+    input[type="reset"] {
+        min-height: 45px;
+
+        padding: 10px 20px;
+
+        margin-top: 10px;
     }
 
 
@@ -1587,14 +1781,12 @@ input[type="reset"]:hover {
     }
 
 
-    /* Recent section */
-
-    .recent-section {
-        padding: 20px;
-
-        width: 100%;
+    .dashboard-card p {
+        font-size: 36px;
     }
 
+
+    /* Section */
 
     .section-header {
         flex-direction: column;
@@ -1609,80 +1801,40 @@ input[type="reset"]:hover {
 
 
     .view-btn {
+        width: 100%;
+
         text-align: center;
-
-        width: 100%;
-    }
-
-
-    /* Table scroll */
-
-    .dashboard-table {
-        min-width: 600px;
-    }
-
-
-    /* Registration */
-
-    form {
-        padding: 20px;
-
-        width: 100%;
-    }
-
-
-    form h1 {
-        font-size: 32px;
-    }
-
-
-    form h2 {
-        font-size: 24px;
-    }
-
-
-    form input,
-    form select,
-    form textarea {
-        width: 100%;
-
-        margin-right: 0;
-    }
-
-
-    form label {
-        display: block;
-
-        margin-bottom: 2px;
     }
 }
 
 
-/* ================================
+/* =========================================
    SMALL MOBILE
-================================ */
+========================================= */
 
 @media (max-width: 480px) {
 
     .sidebar {
-        padding: 18px 15px;
+        padding: 22px 15px 25px;
     }
 
 
     .sidebar #emp {
-        font-size: 25px;
+        font-size: 27px;
+
+        margin-bottom: 25px;
     }
 
 
     .sidebar a {
-        min-height: 55px;
+        min-height: 58px;
 
-        font-size: 17px;
+        font-size: 18px;
     }
 
 
     .main-d {
-        padding: 20px 12px;
+        padding: 22px 12px 35px;
     }
 
 
@@ -1691,7 +1843,27 @@ input[type="reset"]:hover {
     }
 
 
-    .dashboard-card p {
-        font-size: 36px;
+    form {
+        padding: 20px 15px;
+    }
+
+
+    form h1 {
+        font-size: 29px;
+    }
+
+
+    form h2 {
+        font-size: 22px;
+    }
+
+
+    form label {
+        font-size: 16px;
+    }
+
+
+    .dashboard-table {
+        min-width: 570px;
     }
 }
