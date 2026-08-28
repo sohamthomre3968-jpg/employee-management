@@ -1710,87 +1710,90 @@ body {
    SAME NAVIGATION STYLE AS EMPLOYEE LIST
 ========================================= */
 
+/* =========================================
+   TRAINING CONTAINER
+========================================= */
+
+.training-container {
+    margin-left: 180px;
+    width: calc(100% - 180px);
+    min-height: 100vh;
+    padding: 40px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
 @media (max-width: 768px) {
 
-    /* -----------------------------------------
-       TOP NAVIGATION
-    ----------------------------------------- */
+    /* =====================================
+       TOP NAVBAR
+    ===================================== */
 
     .sidebar {
         position: relative;
-
-        top: auto;
-        left: auto;
+        top: 0;
+        left: 0;
 
         width: 100%;
         height: auto;
 
-        min-height: 70px;
-
         padding: 0;
 
         display: flex;
-
         align-items: center;
-
-        justify-content: space-around;
 
         background: #0f514c;
 
         overflow: visible;
     }
 
-
-    /* Hide Employees title on mobile */
+    /* Employees title */
 
     .sidebar #emp {
         display: none;
     }
 
-
-    /* Navigation links */
+    /* Navbar links */
 
     .sidebar a {
         display: block;
 
         width: auto;
 
-        padding: 20px 12px;
-
+        padding: 20px 25px;
         margin: 0;
-
-        border-radius: 0;
 
         color: white;
 
-        font-size: 16px;
-
+        font-size: 18px;
         font-weight: 500;
 
-        text-align: center;
-
         white-space: nowrap;
+
+        border-radius: 0;
+
+        text-decoration: none;
     }
 
-    .sidebar a:hover {
-        background: rgba(255, 255, 255, 0.12);
-    }
-
+    .sidebar a:hover,
     .sidebar a.active {
-        background: transparent;
+        background: rgba(255,255,255,0.12);
     }
 
 
-    /* -----------------------------------------
+    /* =====================================
        MAIN CONTENT
-       NO SIDEBAR MARGIN ON MOBILE
-    ----------------------------------------- */
+    ===================================== */
 
     .dashboard,
     .dashboard-container,
     .home-container,
     .main-content,
-    .form-container {
+    .form-container,
+    .training-container {
 
         margin-left: 0;
 
@@ -1802,28 +1805,26 @@ body {
     }
 
 
-    /* -----------------------------------------
+    /* =====================================
        HEADINGS
-    ----------------------------------------- */
+    ===================================== */
 
     .dashboard h1,
     .dashboard-container h1,
     .home-container h1,
-    .main-content h1 {
+    .main-content h1,
+    .training-container h1 {
 
         font-size: 32px;
 
-        line-height: 1.2;
-
         margin-top: 0;
-
         margin-bottom: 25px;
     }
 
 
-    /* -----------------------------------------
+    /* =====================================
        DASHBOARD CARDS
-    ----------------------------------------- */
+    ===================================== */
 
     .cards,
     .dashboard-cards,
@@ -1834,197 +1835,128 @@ body {
         width: 100%;
 
         gap: 15px;
-
-        margin-bottom: 30px;
     }
 
     .card {
-
         min-height: 110px;
-
         padding: 20px;
     }
 
-    .card h2,
-    .card h3 {
-        font-size: 19px;
-    }
 
-    .card p,
-    .card span {
-        font-size: 30px;
-    }
-
-
-    /* -----------------------------------------
+    /* =====================================
        EMPLOYEE ACTION
-    ----------------------------------------- */
+    ===================================== */
 
     .employee-action {
-
         flex-direction: column;
-
         align-items: stretch;
-
         gap: 12px;
-
-        width: 100%;
     }
 
     .add-btn {
-
         width: 100%;
-
         text-align: center;
-
-        padding: 13px;
     }
 
     .employee-action input {
-
         width: 100%;
-
-        padding: 13px;
-
-        font-size: 16px;
     }
 
 
-    /* -----------------------------------------
+    /* =====================================
        EMPLOYEE TABLE
-    ----------------------------------------- */
+    ===================================== */
 
     .main-content {
         overflow-x: auto;
     }
 
     .employee-table {
-
         min-width: 650px;
-
-        width: 650px;
-    }
-
-    .employee-table th,
-    .employee-table td {
-
-        padding: 12px 10px;
-
-        white-space: nowrap;
     }
 
 
-    /* -----------------------------------------
-       REGISTRATION
-    ----------------------------------------- */
+    /* =====================================
+       REGISTRATION FORM
+    ===================================== */
 
     .form-container {
-
         padding: 20px;
     }
 
     .form-section {
-
         width: 100%;
-
         padding: 20px;
-
-        margin: 0 0 20px 0;
-
-        border-radius: 14px;
+        margin: 0 0 25px 0;
     }
 
     .form-row {
-
         display: flex;
-
         flex-direction: column;
-
         align-items: stretch;
 
         gap: 6px;
-
         margin-bottom: 18px;
     }
 
     .form-row label {
-
         font-size: 16px;
-
-        margin-top: 5px;
     }
 
     .form-row input,
     .form-row select {
-
         width: 100%;
-
         min-height: 48px;
     }
 
     .form-section button {
-
         width: 100%;
-
         margin: 5px 0;
-
-        padding: 13px;
     }
 
 
-    /* -----------------------------------------
+    /* =====================================
        TRAINING FORM
-    ----------------------------------------- */
+    ===================================== */
+
+    .training-container {
+        padding: 20px;
+    }
 
     .training-form {
-
         width: 100%;
+        max-width: none;
 
         padding: 18px;
 
-        margin-bottom: 20px;
-
-        overflow: hidden;
-    }
-
-    .training-form h2 {
-
-        font-size: 20px;
-
-        margin-bottom: 18px;
+        margin: 0 0 20px 0;
     }
 
     .training-form input,
     .training-form select {
 
         width: 100%;
-
         max-width: none;
 
-        min-height: 44px;
+        min-height: 45px;
 
         margin-bottom: 10px;
     }
 
     .training-form button {
-
         width: 100%;
-
-        min-height: 44px;
-
         margin-top: 5px;
     }
 
 
-    /* -----------------------------------------
+    /* =====================================
        TRAINING RECORDS
-    ----------------------------------------- */
+    ===================================== */
 
     .training-records {
 
         width: 100%;
-
-        max-width: 100%;
+        max-width: none;
 
         padding: 15px;
 
@@ -2033,17 +1965,9 @@ body {
         border-radius: 12px;
     }
 
-    .training-records h2 {
-
-        font-size: 22px;
-
-        margin-bottom: 15px;
-    }
-
     .training-records table {
 
         min-width: 850px;
-
         width: max-content;
     }
 
@@ -2055,63 +1979,5 @@ body {
         font-size: 13px;
 
         white-space: nowrap;
-    }
-
-
-    /* -----------------------------------------
-       RECENT SECTION
-    ----------------------------------------- */
-
-    .recent-employees,
-    .recent-section {
-
-        width: 100%;
-
-        padding: 18px;
-
-        overflow-x: auto;
-    }
-
-    .recent-employees h2,
-    .recent-section h2 {
-
-        font-size: 24px;
-    }
-
-    .recent-employees table,
-    .recent-section table {
-
-        min-width: 600px;
-    }
-}
-
-
-/* =========================================
-   VERY SMALL MOBILE
-========================================= */
-
-@media (max-width: 450px) {
-
-    .sidebar a {
-        padding: 20px 8px;
-
-        font-size: 14px;
-    }
-
-    .dashboard,
-    .dashboard-container,
-    .home-container,
-    .main-content,
-    .form-container {
-
-        padding: 20px 15px;
-    }
-
-    .dashboard h1,
-    .dashboard-container h1,
-    .home-container h1,
-    .main-content h1 {
-
-        font-size: 28px;
     }
 }
