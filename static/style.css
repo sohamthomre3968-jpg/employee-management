@@ -1114,6 +1114,10 @@ h1{
    BASIC RESET
 ========================================= */
 
+/* =========================================
+   BASIC RESET
+========================================= */
+
 * {
     box-sizing: border-box;
 }
@@ -1124,18 +1128,18 @@ body {
     padding: 0;
     width: 100%;
     min-height: 100%;
-    overflow-x: hidden;
 }
 
 body {
     font-family: Arial, sans-serif;
     background: #f5f8f7;
     color: #222;
+    overflow-x: hidden;
 }
 
 
 /* =========================================
-   SIDEBAR - DESKTOP + MOBILE
+   SIDEBAR - DESKTOP
 ========================================= */
 
 .sidebar {
@@ -1154,6 +1158,7 @@ body {
     z-index: 1000;
 
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .sidebar #emp {
@@ -1189,16 +1194,13 @@ body {
     background: rgba(255, 255, 255, 0.15);
 }
 
-
-/* Active link */
-
 .sidebar a.active {
     background: rgba(255, 255, 255, 0.15);
 }
 
 
 /* =========================================
-   COMMON MAIN CONTENT
+   COMMON MAIN CONTENT - DESKTOP
 ========================================= */
 
 .dashboard,
@@ -1217,7 +1219,7 @@ body {
 
 
 /* =========================================
-   HOME / DASHBOARD
+   HEADINGS
 ========================================= */
 
 .dashboard h1,
@@ -1229,6 +1231,14 @@ body {
     font-size: 42px;
 
     color: #0f514c;
+}
+
+.main-content h1 {
+    margin-top: 0;
+
+    color: #0f514c;
+
+    font-size: 38px;
 }
 
 
@@ -1372,23 +1382,6 @@ body {
 
 
 /* =========================================
-   EMPLOYEE PAGE
-========================================= */
-
-.main-content {
-    padding: 40px;
-}
-
-.main-content h1 {
-    margin-top: 0;
-
-    color: #0f514c;
-
-    font-size: 38px;
-}
-
-
-/* =========================================
    EMPLOYEE ACTION
 ========================================= */
 
@@ -1483,7 +1476,6 @@ body {
 
 .form-container {
     padding: 40px;
-    margin-left:25px;
 }
 
 .form-section {
@@ -1584,6 +1576,70 @@ body {
    TRAINING PAGE
 ========================================= */
 
+.training-form {
+    width: 100%;
+
+    max-width: 1100px;
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+
+    margin-bottom: 25px;
+}
+
+.training-form h2 {
+    margin-top: 0;
+
+    color: #222;
+
+    font-size: 20px;
+
+    margin-bottom: 20px;
+}
+
+.training-form input,
+.training-form select {
+    min-height: 40px;
+
+    padding: 8px 10px;
+
+    border: 1px solid #aaa;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    max-width: 180px;
+}
+
+.training-form button {
+    min-height: 40px;
+
+    padding: 8px 18px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #0f514c;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   TRAINING RECORDS
+========================================= */
+
 .training-records {
     width: 100%;
 
@@ -1650,123 +1706,84 @@ body {
 
 
 /* =========================================
-   TRAINING ASSIGN FORM
-========================================= */
-
-.training-form {
-    width: 100%;
-
-    max-width: 1100px;
-
-    background: white;
-
-    padding: 20px;
-
-    border-radius: 15px;
-
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
-
-    margin-bottom: 25px;
-}
-
-.training-form h2 {
-    margin-top: 0;
-
-    color: #222;
-
-    font-size: 20px;
-
-    margin-bottom: 20px;
-}
-
-.training-form input,
-.training-form select {
-    min-height: 40px;
-
-    padding: 8px 10px;
-
-    border: 1px solid #aaa;
-
-    border-radius: 7px;
-
-    font-size: 14px;
-
-    max-width: 180px;
-}
-
-.training-form button {
-    min-height: 40px;
-
-    padding: 8px 18px;
-
-    border: none;
-
-    border-radius: 7px;
-
-    background: #0f514c;
-
-    color: white;
-
-    font-weight: bold;
-
-    cursor: pointer;
-}
-
-
-/* =========================================
    MOBILE
+   SAME NAVIGATION STYLE AS EMPLOYEE LIST
 ========================================= */
 
 @media (max-width: 768px) {
 
     /* -----------------------------------------
-       SIDEBAR - SAME AS EMPLOYEE LIST
+       TOP NAVIGATION
     ----------------------------------------- */
 
     .sidebar {
-        position: fixed;
+        position: relative;
 
-        top: 0;
-        left: 0;
+        top: auto;
+        left: auto;
 
-        width: 180px;
-        height: 100vh;
+        width: 100%;
+        height: auto;
 
-        padding: 25px 15px;
+        min-height: 70px;
 
-        display: block;
+        padding: 0;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-around;
 
         background: #0f514c;
 
-        overflow-y: auto;
-        overflow-x: hidden;
+        overflow: visible;
     }
+
+
+    /* Hide Employees title on mobile */
 
     .sidebar #emp {
-        display: block;
-
-        font-size: 18px;
-
-        margin: 0 0 45px 0;
+        display: none;
     }
+
+
+    /* Navigation links */
 
     .sidebar a {
         display: block;
 
-        width: 100%;
+        width: auto;
 
-        padding: 10px 7px;
+        padding: 20px 12px;
 
-        margin-bottom: 22px;
+        margin: 0;
 
-        font-size: 14px;
+        border-radius: 0;
+
+        color: white;
+
+        font-size: 16px;
+
+        font-weight: 500;
+
+        text-align: center;
 
         white-space: nowrap;
+    }
+
+    .sidebar a:hover {
+        background: rgba(255, 255, 255, 0.12);
+    }
+
+    .sidebar a.active {
+        background: transparent;
     }
 
 
     /* -----------------------------------------
        MAIN CONTENT
+       NO SIDEBAR MARGIN ON MOBILE
     ----------------------------------------- */
 
     .dashboard,
@@ -1775,11 +1792,11 @@ body {
     .main-content,
     .form-container {
 
-        margin-left: 180px;
+        margin-left: 0;
 
-        width: calc(100% - 180px);
+        width: 100%;
 
-        min-height: 100vh;
+        min-height: auto;
 
         padding: 25px 20px;
     }
@@ -1794,7 +1811,9 @@ body {
     .home-container h1,
     .main-content h1 {
 
-        font-size: 30px;
+        font-size: 32px;
+
+        line-height: 1.2;
 
         margin-top: 0;
 
@@ -1815,6 +1834,8 @@ body {
         width: 100%;
 
         gap: 15px;
+
+        margin-bottom: 30px;
     }
 
     .card {
@@ -1846,6 +1867,8 @@ body {
         align-items: stretch;
 
         gap: 12px;
+
+        width: 100%;
     }
 
     .add-btn {
@@ -1871,14 +1894,15 @@ body {
        EMPLOYEE TABLE
     ----------------------------------------- */
 
+    .main-content {
+        overflow-x: auto;
+    }
+
     .employee-table {
 
         min-width: 650px;
-    }
 
-    .main-content {
-
-        overflow-x: auto;
+        width: 650px;
     }
 
     .employee-table th,
@@ -1891,20 +1915,21 @@ body {
 
 
     /* -----------------------------------------
-       FORM
+       REGISTRATION
     ----------------------------------------- */
 
     .form-container {
-        margin-left: 25%;
 
         padding: 20px;
     }
 
     .form-section {
 
+        width: 100%;
+
         padding: 20px;
 
-        width: 100%;
+        margin: 0 0 20px 0;
 
         border-radius: 14px;
     }
@@ -1948,21 +1973,25 @@ body {
 
 
     /* -----------------------------------------
-       TRAINING PAGE
+       TRAINING FORM
     ----------------------------------------- */
 
     .training-form {
 
         width: 100%;
 
-        padding: 16px;
+        padding: 18px;
 
         margin-bottom: 20px;
+
+        overflow: hidden;
     }
 
     .training-form h2 {
 
         font-size: 20px;
+
+        margin-bottom: 18px;
     }
 
     .training-form input,
@@ -1972,12 +2001,16 @@ body {
 
         max-width: none;
 
-        margin-bottom: 8px;
+        min-height: 44px;
+
+        margin-bottom: 10px;
     }
 
     .training-form button {
 
         width: 100%;
+
+        min-height: 44px;
 
         margin-top: 5px;
     }
@@ -1990,6 +2023,8 @@ body {
     .training-records {
 
         width: 100%;
+
+        max-width: 100%;
 
         padding: 15px;
 
@@ -2020,5 +2055,63 @@ body {
         font-size: 13px;
 
         white-space: nowrap;
+    }
+
+
+    /* -----------------------------------------
+       RECENT SECTION
+    ----------------------------------------- */
+
+    .recent-employees,
+    .recent-section {
+
+        width: 100%;
+
+        padding: 18px;
+
+        overflow-x: auto;
+    }
+
+    .recent-employees h2,
+    .recent-section h2 {
+
+        font-size: 24px;
+    }
+
+    .recent-employees table,
+    .recent-section table {
+
+        min-width: 600px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+    .sidebar a {
+        padding: 20px 8px;
+
+        font-size: 14px;
+    }
+
+    .dashboard,
+    .dashboard-container,
+    .home-container,
+    .main-content,
+    .form-container {
+
+        padding: 20px 15px;
+    }
+
+    .dashboard h1,
+    .dashboard-container h1,
+    .home-container h1,
+    .main-content h1 {
+
+        font-size: 28px;
     }
 }
