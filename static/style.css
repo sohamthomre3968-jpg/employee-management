@@ -748,7 +748,7 @@ h1{
 /* @media (max-width: 768px) {
 
     /* Sidebar */
-    .sidebar {
+    /* .sidebar {
         width: 92%;
         max-width: 340px;
         margin: 0 auto 15px auto;
@@ -763,7 +763,7 @@ h1{
         box-sizing: border-box;
     }
 
-    /* Main content */
+    /* Main content *
     .main-content {
         width: 94%;
         margin: 15px auto;
@@ -771,7 +771,7 @@ h1{
         box-sizing: border-box;
     }
 
-    /* Registration box */
+    /* Registration box 
     .registration-container,
     .employee-registration,
     .registration-form {
@@ -779,21 +779,21 @@ h1{
         max-width: 100%;
         margin: 0 auto;
         box-sizing: border-box;
-    }
+    }*/
 
     /* Heading */
-    h1 {
+   /* h1 {
         font-size: 26px;
         text-align: center;
     }
 
     /* Form rows */
-    .form-row {
+   /* .form-row {
         display: flex;
         flex-direction: column;
         width: 100%;
         margin-bottom: 15px;
-    } 
+    } */
 
     /* .form-row label {
         width: 100%;
@@ -836,28 +836,3 @@ h1{
 
 
 /* Extra small mobile screens */
-@media (max-width: 600px) {
-
-    .sidebar {
-        width: 94%;
-    }
-
-    .main-content {
-        width: 96%;
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 23px;
-    }
-
-    label {
-        font-size: 14px;
-    }
-
-    input,
-    select {
-        min-height: 38px;
-        font-size: 14px;
-    }
-}
