@@ -1730,50 +1730,98 @@ body {
    MOBILE VIEW
    ========================= */
 
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
 @media (max-width: 768px) {
 
-    /* Sidebar becomes TOP NAVBAR */
+    /* =========================
+       TOP NAVBAR
+    ========================= */
+
     .sidebar {
-        position: static !important;
+        position: relative !important;
+
+        top: 0 !important;
+        left: 0 !important;
+
         width: 100% !important;
         height: auto !important;
-        min-height: 0 !important;
+        min-height: 70px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
 
         display: flex !important;
         flex-direction: row !important;
+
         align-items: center !important;
+        justify-content: space-around !important;
 
-        padding: 0 !important;
-        margin: 0 !important;
+        background: #0f514c !important;
 
-        overflow-x: auto !important;
-        white-space: nowrap !important;
+        overflow: hidden !important;
+
+        z-index: 1000 !important;
     }
 
-    /* Employees heading */
+
+    /* Employees title hide */
     .sidebar #emp {
         display: none !important;
     }
 
-    /* Sidebar links */
+
+    /* Navbar links */
     .sidebar a {
-        display: block !important;
+        display: flex !important;
 
         width: auto !important;
-        min-width: auto !important;
+        min-width: 0 !important;
 
-        padding: 22px 25px !important;
+        padding: 22px 14px !important;
         margin: 0 !important;
 
+        color: white !important;
+
+        font-size: 18px !important;
+        font-weight: 500 !important;
+
         text-decoration: none !important;
+
         white-space: nowrap !important;
+
+        border-radius: 0 !important;
+
+        flex: 1 !important;
+
+        justify-content: center !important;
     }
 
-    .sidebar span {
-        display: inline !important;
+
+    .sidebar a:hover,
+    .sidebar a.active {
+        background: rgba(255, 255, 255, 0.12) !important;
     }
 
-    /* Main content */
+
+    /* Hide Training & Courses from mobile navbar
+       so navbar looks like Employee Registration page */
+    .sidebar a:nth-of-type(4) {
+        display: none !important;
+    }
+
+
+    /* =========================
+       RESET ALL DESKTOP CONTENT
+    ========================= */
+
+    .dashboard,
+    .dashboard-container,
+    .home-container,
+    .main-content,
+    .form-container,
     .training-container,
     .container,
     .employee-container,
@@ -1785,41 +1833,247 @@ body {
         margin-right: 0 !important;
 
         padding: 20px !important;
+
+        min-height: auto !important;
+
         box-sizing: border-box !important;
     }
 
-    /* Headings */
+
+    /* =========================
+       HEADINGS
+    ========================= */
+
+    .dashboard h1,
+    .dashboard-container h1,
+    .home-container h1,
+    .main-content h1,
     .training-container h1 {
-        font-size: 28px !important;
+        font-size: 30px !important;
+
+        margin-top: 10px !important;
+        margin-bottom: 25px !important;
+
+        line-height: 1.2 !important;
     }
 
-    /* Training form */
+
+    /* =========================
+       REGISTRATION FORM
+    ========================= */
+
+    .form-container {
+        padding: 20px !important;
+    }
+
+
+    .form-section {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 0 25px 0 !important;
+
+        padding: 20px !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* Desktop 4-column form becomes
+       proper mobile single-column form */
+
+    .form-row {
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: stretch !important;
+
+        width: 100% !important;
+
+        gap: 8px !important;
+
+        margin-bottom: 20px !important;
+    }
+
+
+    .form-row label {
+        width: 100% !important;
+
+        font-size: 17px !important;
+
+        margin: 0 !important;
+    }
+
+
+    .form-row input,
+    .form-row select {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        min-height: 48px !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* =========================
+       DASHBOARD CARDS
+    ========================= */
+
+    .cards,
+    .dashboard-cards,
+    .card-container {
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        gap: 18px !important;
+    }
+
+
+    .card {
+        width: 100% !important;
+
+        min-height: 130px !important;
+
+        padding: 22px !important;
+    }
+
+
+    /* =========================
+       EMPLOYEE ACTION
+    ========================= */
+
+    .employee-action {
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: stretch !important;
+
+        width: 100% !important;
+
+        gap: 12px !important;
+    }
+
+
+    .employee-action input {
+        width: 100% !important;
+
+        max-width: 100% !important;
+    }
+
+
+    .add-btn {
+        width: fit-content !important;
+    }
+
+
+    /* =========================
+       NORMAL TABLES
+    ========================= */
+
+    .recent-employees,
+    .recent-section {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        overflow-x: auto !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    .recent-employees table,
+    .recent-section table,
+    .employee-table {
+        min-width: 650px !important;
+    }
+
+
+    /* =========================
+       TRAINING FORM
+    ========================= */
+
     .training-form {
         width: 100% !important;
+
+        max-width: 100% !important;
+
+        padding: 18px !important;
+
         box-sizing: border-box !important;
-        overflow: hidden !important;
+
+        overflow: visible !important;
     }
+
 
     .training-form form {
         width: 100% !important;
     }
 
-    /* Form inputs */
+
     .training-form input,
     .training-form select {
+        width: 100% !important;
+
         max-width: 100% !important;
+
+        min-height: 44px !important;
+
         box-sizing: border-box !important;
+
+        margin-bottom: 10px !important;
     }
 
-    /* Training records */
+
+    .training-form button {
+        margin-top: 5px !important;
+    }
+
+
+    /* =========================
+       TRAINING RECORDS
+    ========================= */
+
     .training-records {
         width: 100% !important;
+
+        max-width: 100% !important;
+
         box-sizing: border-box !important;
+
         overflow-x: auto !important;
+
+        padding: 18px !important;
     }
+
 
     .training-records table {
         width: max-content !important;
-        min-width: 800px !important;
+
+        min-width: 850px !important;
+    }
+
+
+    /* =========================
+       PREVENT HORIZONTAL PAGE
+       SHIFT
+    ========================= */
+
+    html,
+    body {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        overflow-x: hidden !important;
     }
 }
