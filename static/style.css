@@ -836,3 +836,249 @@ h1{
 
 
 /* Extra small mobile screens */
+@media (max-width: 768px) {
+
+    /* Sidebar becomes normal top section */
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+        min-height: auto;
+
+        padding: 15px;
+
+        text-align: center;
+    }
+
+    #emp {
+        margin-bottom: 15px;
+    }
+
+    .sidebar a {
+        width: 100%;
+
+        margin: 8px 0;
+
+        min-height: 45px;
+    }
+
+
+    /* Main content */
+    .main-content,
+    .main-d,
+    .main-b {
+        width: 100%;
+
+        margin-left: 0;
+
+        padding: 20px 15px;
+    }
+
+
+    .main-content h1,
+    .main-d h1,
+    .main-b h1 {
+        font-size: 26px;
+
+        text-align: center;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* Dashboard cards */
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .dashboard-card {
+        padding: 20px;
+    }
+
+
+    /* Recent section */
+    .recent-section {
+        padding: 15px;
+
+        overflow-x: auto;
+    }
+
+    .section-header {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .view-btn {
+        text-align: center;
+    }
+
+
+    /* Employee search */
+    .employee-action {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .employee-action input {
+        width: 100%;
+    }
+
+    .add-btn {
+        text-align: center;
+    }
+
+
+    /* Employee table */
+    .main-content {
+        overflow-x: hidden;
+    }
+
+    .employee-table {
+        min-width: 600px;
+    }
+
+
+    /* Registration */
+    .form-container {
+        width: 100%;
+
+        margin-left: 0;
+
+        padding: 20px 15px;
+    }
+
+    .form-section {
+        margin-bottom: 25px;
+    }
+
+    .form-section h2 {
+        font-size: 20px;
+    }
+
+    .form-row {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 6px;
+
+        margin-bottom: 16px;
+    }
+
+    .form-row label {
+        width: 100%;
+    }
+
+    .form-row input,
+    .form-row select {
+        width: 100%;
+    }
+
+
+    /* Registration buttons */
+    .form-section button {
+        width: 100%;
+
+        margin: 6px 0;
+    }
+
+
+    /* Training */
+    .training-form,
+    .records {
+        padding: 18px 15px;
+    }
+
+    .training-form form {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 7px;
+    }
+
+    .training-form label {
+        margin-top: 10px;
+    }
+
+    .training-form input,
+    .training-form select {
+        width: 100%;
+
+        min-height: 42px;
+    }
+
+    .training-form button {
+        width: 100%;
+
+        margin-top: 15px;
+    }
+
+
+    /* Training table can scroll horizontally */
+    .records {
+        overflow-x: auto;
+    }
+
+    .records table {
+        min-width: 900px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .sidebar {
+        padding: 12px;
+    }
+
+    #emp {
+        font-size: 17px;
+    }
+
+    .sidebar a {
+        font-size: 14px;
+    }
+
+    .main-content,
+    .main-d,
+    .main-b {
+        padding: 15px 10px;
+    }
+
+    .main-content h1,
+    .main-d h1,
+    .main-b h1 {
+        font-size: 23px;
+    }
+
+    .dashboard-card h3 {
+        font-size: 16px;
+    }
+
+    .dashboard-card p {
+        font-size: 28px;
+    }
+
+    .form-container {
+        padding: 15px 12px;
+    }
+
+    .training-form,
+    .records,
+    .recent-section {
+        padding: 15px 10px;
+    }
+}
