@@ -1098,6 +1098,10 @@ h1{
    BASIC RESET
 ========================================= */
 
+/* =========================================
+   BASIC RESET
+========================================= */
+
 * {
     box-sizing: border-box;
 }
@@ -1113,13 +1117,13 @@ body {
 
 body {
     font-family: Arial, sans-serif;
-    background: #f4f8f7;
+    background: #f5f8f7;
     color: #222;
 }
 
 
 /* =========================================
-   SIDEBAR
+   SIDEBAR - DESKTOP
 ========================================= */
 
 .sidebar {
@@ -1136,8 +1140,6 @@ body {
     color: white;
 
     z-index: 1000;
-
-    overflow-y: auto;
 }
 
 .sidebar #emp {
@@ -1152,19 +1154,17 @@ body {
 .sidebar a {
     display: block;
 
-    width: 100%;
-
-    padding: 12px 10px;
-    margin-bottom: 8px;
-
     color: white;
     text-decoration: none;
 
     font-size: 18px;
+    font-weight: 500;
+
+    padding: 12px 10px;
+
+    margin-bottom: 8px;
 
     border-radius: 8px;
-
-    transition: 0.2s;
 }
 
 .sidebar a:hover {
@@ -1173,11 +1173,18 @@ body {
 
 
 /* =========================================
-   COMMON MAIN CONTENT
+   HOME / DASHBOARD
 ========================================= */
 
-.main-content,
-.form-container {
+/*
+   IMPORTANT:
+   Home page content sidebar ke peeche na jaaye.
+*/
+
+.dashboard,
+.dashboard-container,
+.home-container,
+.main-content {
     margin-left: 250px;
 
     width: calc(100% - 250px);
@@ -1188,26 +1195,181 @@ body {
 }
 
 
+/* Dashboard heading */
+
+.dashboard h1,
+.dashboard-container h1,
+.home-container h1 {
+    margin-top: 0;
+    margin-bottom: 35px;
+
+    font-size: 42px;
+    color: #0f514c;
+}
+
+
+/* =========================================
+   DASHBOARD CARDS
+========================================= */
+
+.cards,
+.dashboard-cards,
+.card-container {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    max-width: 1000px;
+
+    margin-bottom: 45px;
+}
+
+.card {
+    background: white;
+
+    padding: 28px;
+
+    min-height: 150px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    border-left: 6px solid #0f514c;
+}
+
+.card h2,
+.card h3 {
+    margin: 0 0 18px;
+
+    font-size: 22px;
+
+    color: #333;
+}
+
+.card p,
+.card span {
+    font-size: 38px;
+
+    font-weight: bold;
+
+    color: #0f514c;
+}
+
+
+/* =========================================
+   RECENT EMPLOYEES
+========================================= */
+
+.recent-employees,
+.recent-section {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+
+    width: 100%;
+
+    max-width: 1100px;
+}
+
+.recent-employees h2,
+.recent-section h2 {
+    margin-top: 0;
+
+    font-size: 30px;
+
+    color: #0f514c;
+}
+
+
+/* View All */
+
+.recent-employees a,
+.recent-section a {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: #0f514c;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.recent-employees a:hover,
+.recent-section a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   DASHBOARD TABLE
+========================================= */
+
+.recent-employees table,
+.recent-section table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+.recent-employees th,
+.recent-employees td,
+.recent-section th,
+.recent-section td {
+    padding: 14px;
+
+    text-align: left;
+
+    border: 1px solid #ddd;
+
+    font-size: 16px;
+}
+
+.recent-employees th,
+.recent-section th {
+    background: #0f514c;
+
+    color: white;
+
+    font-size: 17px;
+}
+
+.recent-employees tr:nth-child(even),
+.recent-section tr:nth-child(even) {
+    background: #f5f8f7;
+}
+
+
 /* =========================================
    EMPLOYEE PAGE
 ========================================= */
 
 .main-content {
-    background: #f4f8f7;
+    padding: 40px;
 }
 
 .main-content h1 {
-    margin: 0 0 30px 0;
+    margin-top: 0;
 
     color: #0f514c;
 
-    font-size: 32px;
+    font-size: 38px;
 }
 
 
-/* =========================================
-   EMPLOYEE ACTION
-========================================= */
+/* Add + Search */
 
 .employee-action {
     display: flex;
@@ -1222,19 +1384,18 @@ body {
 .add-btn {
     display: inline-block;
 
-    padding: 12px 20px;
+    padding: 13px 22px;
 
     background: #0f514c;
+
     color: white;
 
     text-decoration: none;
 
-    border-radius: 8px;
-
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
 
-    transition: 0.2s;
+    border-radius: 9px;
 }
 
 .add-btn:hover {
@@ -1242,14 +1403,15 @@ body {
 }
 
 .employee-action input {
-    width: 320px;
+    width: 300px;
 
-    padding: 12px 15px;
-
-    border: 1px solid #aaa;
-    border-radius: 8px;
+    padding: 13px 15px;
 
     font-size: 16px;
+
+    border: 1px solid #aaa;
+
+    border-radius: 9px;
 
     outline: none;
 }
@@ -1259,9 +1421,7 @@ body {
 }
 
 
-/* =========================================
-   EMPLOYEE TABLE
-========================================= */
+/* Employee table */
 
 .employee-table {
     width: 100%;
@@ -1273,8 +1433,6 @@ body {
     border-radius: 10px;
 
     overflow: hidden;
-
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 }
 
 .employee-table th,
@@ -1288,17 +1446,14 @@ body {
 
 .employee-table th {
     background: #0f514c;
+
     color: white;
 
-    font-size: 16px;
+    font-size: 17;
 }
 
 .employee-table td {
-    font-size: 15px;
-}
-
-.employee-table tbody tr:hover {
-    background: #f1f7f6;
+    font-size: 16px;
 }
 
 
@@ -1307,91 +1462,71 @@ body {
 ========================================= */
 
 .form-container {
-    background: #f4f8f7;
+    margin-left: 250px;
+
+    width: calc(100% - 250px);
+
+    min-height: 100vh;
+
+    padding: 40px;
 }
 
 .form-section {
     width: 100%;
+
     max-width: 1100px;
 
-    margin: 0 auto 35px;
-
-    padding: 25px;
+    margin: 0 auto 30px;
 
     background: white;
 
-    border-radius: 14px;
+    padding: 25px;
 
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
 }
 
 .form-section h1,
 .form-section h2 {
-    margin-top: 0;
-    margin-bottom: 25px;
-
     color: #0f514c;
+
+    margin-top: 0;
 }
-
-.form-section h1 {
-    font-size: 32px;
-}
-
-.form-section h2 {
-    font-size: 25px;
-}
-
-
-/* =========================================
-   FORM ROW
-========================================= */
 
 .form-row {
     display: grid;
 
-    grid-template-columns: 150px minmax(180px, 1fr)
-                           150px minmax(180px, 1fr);
+    grid-template-columns: 150px 1fr 150px 1fr;
 
     gap: 15px;
 
     align-items: center;
 
     margin-bottom: 20px;
-
-    width: 100%;
 }
 
-
-/* =========================================
-   FORM LABEL
-========================================= */
-
 .form-row label {
-    font-size: 18px;
+    font-size: 17px;
 
     color: #0f514c;
 
-    font-weight: 500;
+    font-weight: 600;
 }
-
-
-/* =========================================
-   FORM INPUT / SELECT
-========================================= */
 
 .form-row input,
 .form-row select {
     width: 100%;
 
-    min-height: 50px;
+    min-height: 48px;
 
     padding: 10px 15px;
 
-    font-size: 17px;
+    font-size: 16px;
 
     border: 1px solid #aaa;
 
-    border-radius: 10px;
+    border-radius: 9px;
 
     background: white;
 
@@ -1400,35 +1535,8 @@ body {
 
 .form-row input:focus,
 .form-row select:focus {
-    border: 2px solid #0f514c;
+    border-color: #0f514c;
 }
-
-
-/* =========================================
-   DATE INPUT
-========================================= */
-
-.form-row input[type="date"] {
-    cursor: pointer;
-}
-
-
-/* =========================================
-   HORIZONTAL LINE
-========================================= */
-
-.form-container hr {
-    border: none;
-
-    border-top: 1px solid #ccc;
-
-    margin: 30px 0;
-}
-
-
-/* =========================================
-   BUTTONS
-========================================= */
 
 .form-section button {
     padding: 12px 25px;
@@ -1442,36 +1550,35 @@ body {
     font-size: 16px;
 
     cursor: pointer;
-
-    transition: 0.2s;
 }
 
 .form-section button[type="submit"] {
     background: #0f514c;
-    color: white;
-}
 
-.form-section button[type="submit"]:hover {
-    background: #0b403c;
+    color: white;
 }
 
 .form-section button[type="reset"] {
     background: #ddd;
-    color: #222;
-}
 
-.form-section button[type="reset"]:hover {
-    background: #ccc;
+    color: #222;
 }
 
 
 /* =========================================
-   MOBILE / TABLET
+   MOBILE
 ========================================= */
 
 @media (max-width: 768px) {
 
-    /* ---------- SIDEBAR ---------- */
+    body {
+        background: #f5f8f7;
+    }
+
+
+    /* -------------------------
+       TOP NAVBAR
+    ------------------------- */
 
     .sidebar {
         position: relative;
@@ -1488,12 +1595,17 @@ body {
 
         align-items: center;
 
-        gap: 5px;
+        gap: 8px;
 
         overflow-x: auto;
-        overflow-y: hidden;
 
         white-space: nowrap;
+
+        scrollbar-width: none;
+    }
+
+    .sidebar::-webkit-scrollbar {
+        display: none;
     }
 
     .sidebar #emp {
@@ -1503,186 +1615,243 @@ body {
     .sidebar a {
         display: inline-block;
 
-        width: auto;
+        flex: 0 0 auto;
 
-        flex-shrink: 0;
-
-        padding: 10px 12px;
+        padding: 10px 18px;
 
         margin: 0;
+
+        font-size: 16px;
+    }
+
+
+    /* -------------------------
+       HOME / DASHBOARD
+    ------------------------- */
+
+    .dashboard,
+    .dashboard-container,
+    .home-container,
+    .main-content {
+
+        margin-left: 0;
+
+        width: 100%;
+
+        padding: 20px 15px;
+
+        min-height: auto;
+    }
+
+
+    /* Dashboard heading */
+
+    .dashboard h1,
+    .dashboard-container h1,
+    .home-container h1 {
+
+        font-size: 32px;
+
+        margin-top: 10px;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* -------------------------
+       DASHBOARD CARDS
+    ------------------------- */
+
+    .cards,
+    .dashboard-cards,
+    .card-container {
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        width: 100%;
+
+        margin-bottom: 30px;
+    }
+
+    .card {
+
+        width: 100%;
+
+        min-height: 120px;
+
+        padding: 22px;
+
+        border-radius: 12px;
+    }
+
+    .card h2,
+    .card h3 {
+
+        font-size: 20px;
+
+        margin-bottom: 12px;
+    }
+
+    .card p,
+    .card span {
+
+        font-size: 32px;
+    }
+
+
+    /* -------------------------
+       RECENT EMPLOYEES
+    ------------------------- */
+
+    .recent-employees,
+    .recent-section {
+
+        width: 100%;
+
+        padding: 15px;
+
+        border-radius: 12px;
+
+        overflow-x: auto;
+    }
+
+    .recent-employees h2,
+    .recent-section h2 {
+
+        font-size: 26px;
+    }
+
+    .recent-employees table,
+    .recent-section table {
+
+        min-width: 600px;
+    }
+
+    .recent-employees th,
+    .recent-employees td,
+    .recent-section th,
+    .recent-section td {
+
+        padding: 12px;
 
         font-size: 15px;
     }
 
 
-    /* ---------- MAIN CONTENT ---------- */
-
-    .main-content,
-    .form-container {
-        margin-left: 0;
-
-        width: 100%;
-
-        padding: 20px 12px;
-    }
-
-
-    /* ---------- EMPLOYEE PAGE ---------- */
+    /* -------------------------
+       EMPLOYEE PAGE
+    ------------------------- */
 
     .main-content h1 {
-        font-size: 27px;
 
-        margin-bottom: 20px;
+        font-size: 32px;
+
+        margin-bottom: 25px;
     }
 
     .employee-action {
+
         flex-direction: column;
 
         align-items: stretch;
 
-        gap: 12px;
+        gap: 15px;
     }
 
     .add-btn {
+
         width: 100%;
 
         text-align: center;
+
+        padding: 14px;
     }
 
     .employee-action input {
-        width: 100%;
-    }
 
-    /* Table horizontal scroll */
+        width: 100%;
+
+        padding: 14px;
+
+        font-size: 17px;
+    }
 
     .employee-table {
-        display: block;
 
         width: 100%;
-
-        overflow-x: auto;
-
-        white-space: nowrap;
-    }
-
-    .employee-table th,
-    .employee-table td {
-        padding: 11px;
 
         font-size: 14px;
     }
 
+    .employee-table th,
+    .employee-table td {
 
-    /* ---------- REGISTRATION ---------- */
+        padding: 12px 10px;
+
+        white-space: nowrap;
+    }
+
+
+    /* -------------------------
+       REGISTRATION
+    ------------------------- */
 
     .form-container {
-        padding: 15px 10px;
+
+        margin-left: 0;
+
+        width: 100%;
+
+        padding: 20px 10px;
     }
 
     .form-section {
+
         width: 100%;
 
-        padding: 18px 12px;
+        padding: 18px;
 
-        margin-bottom: 20px;
-
-        border-radius: 10px;
+        border-radius: 12px;
     }
-
-    .form-section h1 {
-        font-size: 27px;
-    }
-
-    .form-section h2 {
-        font-size: 23px;
-    }
-
-
-    /* Form becomes one column */
 
     .form-row {
+
         display: flex;
 
         flex-direction: column;
 
         align-items: stretch;
 
-        gap: 7px;
+        gap: 6px;
 
         margin-bottom: 18px;
     }
 
     .form-row label {
-        font-size: 17px;
 
-        width: 100%;
+        font-size: 16px;
+
+        margin-top: 5px;
     }
 
     .form-row input,
     .form-row select {
+
         width: 100%;
 
         min-height: 48px;
-
-        font-size: 16px;
     }
 
-
-    /* ---------- BUTTONS ---------- */
-
     .form-section button {
+
         width: 100%;
 
         margin: 5px 0;
 
         padding: 13px;
-    }
-}
-
-
-/* =========================================
-   SMALL MOBILE
-========================================= */
-
-@media (max-width: 480px) {
-
-    .sidebar {
-        padding: 10px 6px;
-    }
-
-    .sidebar a {
-        font-size: 14px;
-
-        padding: 9px 10px;
-    }
-
-    .main-content,
-    .form-container {
-        padding: 15px 8px;
-    }
-
-    .main-content h1 {
-        font-size: 24px;
-    }
-
-    .form-section {
-        padding: 15px 10px;
-    }
-
-    .form-section h1 {
-        font-size: 24px;
-    }
-
-    .form-section h2 {
-        font-size: 21px;
-    }
-
-    .form-row label {
-        font-size: 16px;
-    }
-
-    .form-row input,
-    .form-row select {
-        font-size: 15px;
     }
 }
