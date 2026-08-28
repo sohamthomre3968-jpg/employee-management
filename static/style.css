@@ -1102,6 +1102,10 @@ h1{
    BASIC RESET
 ========================================= */
 
+/* =========================================
+   BASIC RESET
+========================================= */
+
 * {
     box-sizing: border-box;
 }
@@ -1148,7 +1152,7 @@ body {
     font-size: 25px;
     font-weight: bold;
 
-    margin-bottom: 30px;
+    margin: 0 0 35px 0;
 }
 
 .sidebar a {
@@ -1157,10 +1161,10 @@ body {
     color: white;
     text-decoration: none;
 
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 500;
 
-    padding: 12px 10px;
+    padding: 13px 10px;
 
     margin-bottom: 8px;
 
@@ -1173,18 +1177,15 @@ body {
 
 
 /* =========================================
-   HOME / DASHBOARD
+   COMMON MAIN CONTENT
 ========================================= */
-
-/*
-   IMPORTANT:
-   Home page content sidebar ke peeche na jaaye.
-*/
 
 .dashboard,
 .dashboard-container,
 .home-container,
-.main-content {
+.main-content,
+.form-container,
+.training-container {
     margin-left: 250px;
 
     width: calc(100% - 250px);
@@ -1195,15 +1196,19 @@ body {
 }
 
 
-/* Dashboard heading */
+/* =========================================
+   HEADINGS
+========================================= */
 
 .dashboard h1,
 .dashboard-container h1,
-.home-container h1 {
-    margin-top: 0;
-    margin-bottom: 35px;
+.home-container h1,
+.main-content h1,
+.training-container h1 {
+    margin: 0 0 30px 0;
 
-    font-size: 42px;
+    font-size: 38px;
+
     color: #0f514c;
 }
 
@@ -1217,13 +1222,14 @@ body {
 .card-container {
     display: grid;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 25px;
 
-    max-width: 1000px;
+    width: 100%;
+    max-width: 1100px;
 
-    margin-bottom: 45px;
+    margin-bottom: 40px;
 }
 
 .card {
@@ -1244,7 +1250,7 @@ body {
 .card h3 {
     margin: 0 0 18px;
 
-    font-size: 22px;
+    font-size: 21px;
 
     color: #333;
 }
@@ -1267,61 +1273,29 @@ body {
 .recent-section {
     background: white;
 
+    width: 100%;
+    max-width: 1100px;
+
     padding: 25px;
 
     border-radius: 15px;
 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
-
-    width: 100%;
-
-    max-width: 1100px;
 }
 
 .recent-employees h2,
 .recent-section h2 {
-    margin-top: 0;
+    margin: 0 0 20px;
 
-    font-size: 30px;
-
-    color: #0f514c;
-}
-
-
-/* View All */
-
-.recent-employees a,
-.recent-section a {
-    display: inline-block;
-
-    margin-bottom: 20px;
+    font-size: 28px;
 
     color: #0f514c;
-
-    font-weight: bold;
-
-    text-decoration: none;
 }
-
-.recent-employees a:hover,
-.recent-section a:hover {
-    text-decoration: underline;
-}
-
-
-/* =========================================
-   DASHBOARD TABLE
-========================================= */
 
 .recent-employees table,
 .recent-section table {
     width: 100%;
-
     border-collapse: collapse;
-
-    overflow: hidden;
-
-    border-radius: 10px;
 }
 
 .recent-employees th,
@@ -1356,27 +1330,14 @@ body {
    EMPLOYEE PAGE
 ========================================= */
 
-.main-content {
-    padding: 40px;
-}
-
-.main-content h1 {
-    margin-top: 0;
-
-    color: #0f514c;
-
-    font-size: 38px;
-}
-
-
-/* Add + Search */
-
 .employee-action {
     display: flex;
 
     align-items: center;
 
     gap: 20px;
+
+    width: 100%;
 
     margin-bottom: 25px;
 }
@@ -1393,9 +1354,12 @@ body {
     text-decoration: none;
 
     font-size: 17px;
+
     font-weight: bold;
 
     border-radius: 9px;
+
+    white-space: nowrap;
 }
 
 .add-btn:hover {
@@ -1421,18 +1385,28 @@ body {
 }
 
 
-/* Employee table */
+/* =========================================
+   EMPLOYEE TABLE
+========================================= */
+
+.employee-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    border-radius: 10px;
+
+    -webkit-overflow-scrolling: touch;
+}
 
 .employee-table {
     width: 100%;
 
+    min-width: 650px;
+
     border-collapse: collapse;
 
     background: white;
-
-    border-radius: 10px;
-
-    overflow: hidden;
 }
 
 .employee-table th,
@@ -1442,6 +1416,8 @@ body {
     border: 1px solid #ddd;
 
     text-align: left;
+
+    white-space: nowrap;
 }
 
 .employee-table th {
@@ -1449,11 +1425,150 @@ body {
 
     color: white;
 
-    font-size: 17;
+    font-size: 17px;
 }
 
 .employee-table td {
     font-size: 16px;
+}
+
+.employee-table tr:nth-child(even) {
+    background: #f5f8f7;
+}
+
+
+/* =========================================
+   TRAINING PAGE
+========================================= */
+
+.training-container {
+    width: calc(100% - 250px);
+}
+
+
+/* Training form */
+
+.training-form {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    width: 100%;
+
+    margin-bottom: 25px;
+}
+
+.training-form label {
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #0f514c;
+}
+
+.training-form input,
+.training-form select {
+    height: 42px;
+
+    padding: 8px 12px;
+
+    border: 1px solid #aaa;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    background: white;
+
+    outline: none;
+}
+
+.training-form input:focus,
+.training-form select:focus {
+    border-color: #0f514c;
+}
+
+.training-form button {
+    height: 42px;
+
+    padding: 0 18px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #0f514c;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.training-form button:hover {
+    background: #0b403c;
+}
+
+
+/* =========================================
+   TRAINING RECORDS
+   Existing #training-records div
+========================================= */
+
+#training-records {
+    width: 100%;
+
+    overflow-x: auto;
+
+    -webkit-overflow-scrolling: touch;
+
+    margin-top: 20px;
+
+    border-radius: 10px;
+}
+
+#training-records table {
+    width: 100%;
+
+    min-width: 850px;
+
+    border-collapse: collapse;
+
+    background: white;
+}
+
+#training-records th,
+#training-records td {
+    padding: 15px;
+
+    border: 1px solid #ddd;
+
+    text-align: left;
+
+    white-space: nowrap;
+}
+
+#training-records th {
+    background: #0f514c;
+
+    color: white;
+
+    font-size: 16px;
+}
+
+#training-records td {
+    font-size: 15px;
+}
+
+#training-records tr:nth-child(even) {
+    background: #f5f8f7;
 }
 
 
@@ -1462,12 +1577,6 @@ body {
 ========================================= */
 
 .form-container {
-    margin-left: 250px;
-
-    width: calc(100% - 250px);
-
-    min-height: 100vh;
-
     padding: 40px;
 }
 
@@ -1480,26 +1589,38 @@ body {
 
     background: white;
 
-    padding: 25px;
+    padding: 30px;
 
     border-radius: 15px;
 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
 }
 
-.form-section h1,
-.form-section h2 {
+.form-section h1 {
+    margin: 0 0 45px;
+
     color: #0f514c;
 
-    margin-top: 0;
+    font-size: 38px;
 }
+
+.form-section h2 {
+    margin: 0 0 30px;
+
+    color: #222;
+
+    font-size: 26px;
+}
+
+
+/* Desktop Form */
 
 .form-row {
     display: grid;
 
-    grid-template-columns: 150px 1fr 150px 1fr;
+    grid-template-columns: 130px 1fr 130px 1fr;
 
-    gap: 15px;
+    gap: 12px 15px;
 
     align-items: center;
 
@@ -1507,7 +1628,7 @@ body {
 }
 
 .form-row label {
-    font-size: 17px;
+    font-size: 16px;
 
     color: #0f514c;
 
@@ -1518,7 +1639,7 @@ body {
 .form-row select {
     width: 100%;
 
-    min-height: 48px;
+    height: 48px;
 
     padding: 10px 15px;
 
@@ -1537,6 +1658,9 @@ body {
 .form-row select:focus {
     border-color: #0f514c;
 }
+
+
+/* Form Buttons */
 
 .form-section button {
     padding: 12px 25px;
@@ -1572,34 +1696,42 @@ body {
 @media (max-width: 768px) {
 
     body {
-        background: #f5f8f7;
+        width: 100%;
+        overflow-x: hidden;
     }
 
 
-    /* -------------------------
-       TOP NAVBAR
-    ------------------------- */
+    /* =====================================
+       MOBILE NAVBAR
+    ===================================== */
 
     .sidebar {
-        position: relative;
+        position: sticky;
 
-        top: auto;
-        left: auto;
+        top: 0;
+        left: 0;
 
         width: 100%;
-        height: auto;
 
-        padding: 12px 10px;
+        height: 64px;
+
+        padding: 7px 5px;
 
         display: flex;
 
         align-items: center;
 
-        gap: 8px;
+        justify-content: space-around;
+
+        gap: 0;
 
         overflow-x: auto;
 
         white-space: nowrap;
+
+        background: #0f514c;
+
+        z-index: 1000;
 
         scrollbar-width: none;
     }
@@ -1613,60 +1745,72 @@ body {
     }
 
     .sidebar a {
-        display: inline-block;
+        display: inline-flex;
+
+        align-items: center;
+
+        justify-content: center;
 
         flex: 0 0 auto;
 
-        padding: 10px 18px;
+        padding: 11px 13px;
 
         margin: 0;
 
-        font-size: 16px;
+        border-radius: 7px;
+
+        font-size: 14px;
+
+        white-space: nowrap;
     }
 
 
-    /* -------------------------
-       HOME / DASHBOARD
-    ------------------------- */
+    /* =====================================
+       COMMON CONTENT
+    ===================================== */
 
     .dashboard,
     .dashboard-container,
     .home-container,
-    .main-content {
+    .main-content,
+    .form-container,
+    .training-container {
 
         margin-left: 0;
 
         width: 100%;
 
-        padding: 20px 15px;
-
         min-height: auto;
+
+        padding: 25px 18px;
     }
 
 
-    /* Dashboard heading */
+    /* =====================================
+       HEADINGS
+    ===================================== */
 
     .dashboard h1,
     .dashboard-container h1,
-    .home-container h1 {
+    .home-container h1,
+    .main-content h1,
+    .training-container h1 {
 
         font-size: 32px;
 
-        margin-top: 10px;
+        line-height: 1.2;
 
-        margin-bottom: 25px;
+        margin: 0 0 25px;
     }
 
 
-    /* -------------------------
+    /* =====================================
        DASHBOARD CARDS
-    ------------------------- */
+    ===================================== */
 
     .cards,
     .dashboard-cards,
     .card-container {
-
-        display: grid;
 
         grid-template-columns: 1fr;
 
@@ -1690,22 +1834,18 @@ body {
 
     .card h2,
     .card h3 {
-
         font-size: 20px;
-
-        margin-bottom: 12px;
     }
 
     .card p,
     .card span {
-
         font-size: 32px;
     }
 
 
-    /* -------------------------
+    /* =====================================
        RECENT EMPLOYEES
-    ------------------------- */
+    ===================================== */
 
     .recent-employees,
     .recent-section {
@@ -1717,12 +1857,8 @@ body {
         border-radius: 12px;
 
         overflow-x: auto;
-    }
 
-    .recent-employees h2,
-    .recent-section h2 {
-
-        font-size: 26px;
+        -webkit-overflow-scrolling: touch;
     }
 
     .recent-employees table,
@@ -1739,27 +1875,26 @@ body {
         padding: 12px;
 
         font-size: 15px;
+
+        white-space: nowrap;
     }
 
 
-    /* -------------------------
-       EMPLOYEE PAGE
-    ------------------------- */
-
-    .main-content h1 {
-
-        font-size: 32px;
-
-        margin-bottom: 25px;
-    }
+    /* =====================================
+       EMPLOYEE ACTION
+    ===================================== */
 
     .employee-action {
+
+        display: flex;
 
         flex-direction: column;
 
         align-items: stretch;
 
-        gap: 15px;
+        gap: 14px;
+
+        width: 100%;
     }
 
     .add-btn {
@@ -1775,36 +1910,119 @@ body {
 
         width: 100%;
 
-        padding: 14px;
+        height: 52px;
+
+        padding: 12px 15px;
 
         font-size: 17px;
     }
 
-    .employee-table {
+
+    /* =====================================
+       EMPLOYEE TABLE
+    ===================================== */
+
+    .employee-table-wrapper {
 
         width: 100%;
 
-        font-size: 14px;
+        overflow-x: auto;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .employee-table {
+
+        min-width: 650px;
     }
 
     .employee-table th,
     .employee-table td {
 
-        padding: 12px 10px;
+        padding: 14px 12px;
 
         white-space: nowrap;
     }
 
 
-    /* -------------------------
-       REGISTRATION
-    ------------------------- */
+    /* =====================================
+       TRAINING FORM
+    ===================================== */
 
-    .form-container {
+    .training-form {
 
-        margin-left: 0;
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 7px;
 
         width: 100%;
+    }
+
+    .training-form label {
+
+        margin-top: 8px;
+
+        font-size: 15px;
+    }
+
+    .training-form input,
+    .training-form select {
+
+        width: 100%;
+
+        height: 48px;
+
+        font-size: 16px;
+    }
+
+    .training-form button {
+
+        width: 100%;
+
+        height: 48px;
+
+        margin-top: 10px;
+    }
+
+
+    /* =====================================
+       TRAINING RECORDS TABLE
+    ===================================== */
+
+    #training-records {
+
+        width: 100%;
+
+        overflow-x: auto;
+
+        -webkit-overflow-scrolling: touch;
+
+        margin-top: 20px;
+    }
+
+    #training-records table {
+
+        min-width: 850px;
+
+        width: 100%;
+    }
+
+    #training-records th,
+    #training-records td {
+
+        padding: 13px 12px;
+
+        white-space: nowrap;
+    }
+
+
+    /* =====================================
+       REGISTRATION FORM
+    ===================================== */
+
+    .form-container {
 
         padding: 20px 10px;
     }
@@ -1813,10 +2031,33 @@ body {
 
         width: 100%;
 
-        padding: 18px;
+        padding: 25px 18px;
 
-        border-radius: 12px;
+        margin: 0 auto 25px;
+
+        border-radius: 15px;
     }
+
+    .form-section h1 {
+
+        font-size: 32px;
+
+        line-height: 1.2;
+
+        margin-bottom: 45px;
+    }
+
+    .form-section h2 {
+
+        font-size: 26px;
+
+        margin-bottom: 28px;
+    }
+
+
+    /* =====================================
+       MOBILE FORM
+    ===================================== */
 
     .form-row {
 
@@ -1826,32 +2067,104 @@ body {
 
         align-items: stretch;
 
-        gap: 6px;
+        gap: 7px;
 
-        margin-bottom: 18px;
+        width: 100%;
+
+        margin-bottom: 22px;
     }
 
     .form-row label {
 
-        font-size: 16px;
+        display: block;
 
-        margin-top: 5px;
+        width: 100%;
+
+        font-size: 17px;
+
+        margin: 0;
+
+        color: #0f514c;
     }
 
     .form-row input,
     .form-row select {
 
+        display: block;
+
         width: 100%;
 
-        min-height: 48px;
+        height: 52px;
+
+        min-height: 52px;
+
+        padding: 12px 14px;
+
+        font-size: 16px;
     }
+
+
+    /* =====================================
+       FORM BUTTONS
+    ===================================== */
 
     .form-section button {
 
         width: 100%;
 
-        margin: 5px 0;
+        margin: 6px 0;
 
-        padding: 13px;
+        padding: 14px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .sidebar {
+        height: 60px;
+
+        padding: 6px 3px;
+    }
+
+    .sidebar a {
+
+        padding: 10px 9px;
+
+        font-size: 13px;
+    }
+
+    .dashboard,
+    .dashboard-container,
+    .home-container,
+    .main-content,
+    .training-container {
+
+        padding: 22px 14px;
+    }
+
+    .main-content h1,
+    .training-container h1 {
+
+        font-size: 30px;
+    }
+
+    .form-container {
+
+        padding: 15px 8px;
+    }
+
+    .form-section {
+
+        padding: 22px 16px;
+    }
+
+    .form-section h1 {
+
+        font-size: 30px;
     }
 }
